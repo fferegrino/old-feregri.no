@@ -29,7 +29,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (
     ('github', 'https://github.com/fferegrino/'),
     ('twitter-square', 'https://twitter.com/io_exception'),
-    ('youtube', 'https://twitter.com/io_exception'),
+    ('youtube', 'https://www.youtube.com/channel/UC8KCb358oioQMcJ5pUfs8UQ'),
+    ('linkedin', 'https://www.linkedin.com/in/antonioferegrino/'),
 )
 
 DEFAULT_PAGINATION = 10
@@ -41,5 +42,5 @@ STATIC_CONTENT=[
     "images"
 ]
 THEME = "pure-single"
-COVER_IMG_URL="images/cover.jpg"
-PROFILE_IMG_URL="images/head.jpg"
+COVER_IMG_URL="/images/cover.jpg"
+PROFILE_IMG_URL="/images/head.jpg"
