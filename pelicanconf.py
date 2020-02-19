@@ -26,10 +26,20 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+    ('github', 'https://github.com/fferegrino/'),
+    ('twitter-square', 'https://twitter.com/io_exception'),
+    ('youtube', 'https://twitter.com/io_exception'),
+)
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+STATIC_CONTENT=[
+    "images"
+]
+THEME = "pure-single"
+COVER_IMG_URL="images/cover.jpg"
+PROFILE_IMG_URL="images/head.jpg"
