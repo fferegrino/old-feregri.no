@@ -3,6 +3,7 @@ layout: post
 language: en
 original_url: https://dev.to/fferegrino/reading-emails-with-python-4o72
 title: Reading emails with Python
+short_summary: So you've got a bunch of emails ready to be processed, but how?
 date: 2020-01-10 10:00:00
 tags: python, medium, email
 ---

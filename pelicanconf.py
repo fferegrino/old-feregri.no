@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
 AUTHOR = 'Antonio Feregrino'
@@ -18,12 +16,6 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
 
 # Social widget
 SOCIAL = (
@@ -44,3 +36,13 @@ STATIC_CONTENT=[
 THEME = "pure-single"
 COVER_IMG_URL="/images/cover.jpg"
 PROFILE_IMG_URL="/images/head.jpg"
+
+# Filters
+
+from urllib.parse import urlparse
+
+def hostname(uri):
+    url = urlparse(uri)
+    return url.netloc
+
+JINJA_FILTERS = {'hostname':hostname}

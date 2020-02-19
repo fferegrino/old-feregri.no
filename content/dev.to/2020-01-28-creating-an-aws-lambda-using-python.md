@@ -5,6 +5,7 @@ original_url: https://dev.to/fferegrino/creating-an-aws-lambda-using-pipenv-2h4a
 title: Creating an AWS Lambda using python
 date: 2020-01-28 10:00:00
 tags: aws, aws-lambda, python, pip
+short_summary: I will try to guide you when you are about to create a function that operates under the serverless paradigm. 
 ---
 The AWS Lambdas represent one of the most common solutions when deploying serverless applications. In this post, I try to cover how to develop, package, deploy and configure a single function, that runs in somebody else's computer.
 

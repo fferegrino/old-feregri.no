@@ -5,6 +5,7 @@ original_url: https://tacosdedatos.com/visualizando-temblores-joyplots
 title: Visualizando temblores con ridgeline plots
 date: 2020-02-18 10:00:00
 tags: sismos, ridgeline plots, matplotlib, python
+short_summary: Seguramente has visto todas esas gráficas parecieran sacadas de portadas de álbums… pues bien, en este post te voy a enseñar cómo crearla usando matplotlib, python y los datos del sistema sismológico nacional mexicano.
 ---
 Seguramente has visto todas esas gráficas parecieran sacadas de portadas de álbums... pues bien, en este post te voy a enseñar cómo crearla usando matplotlib, python y los datos del sistema sismológico nacional mexicano.
 

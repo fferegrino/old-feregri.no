@@ -5,6 +5,7 @@ original_url: https://tacosdedatos.com/mas-data-viz-con-spotify-python
 title: Más visualización con tus datos de Spotify con Python
 date: 2020-02-11 10:00:00
 tags: seaborn, matplotlib, python
+short_summary: Inspirado por el post de Nerudista en Tacos de datos fui a pedirles mi información a Spotify con el fin de hacer unas cuantas gráficas con ella.
 ---
 Inspirado por [el post de Nerudista en Tacos de datos](https://tacosdedatos.com/dueno-de-mis-datos-spotify) fui a pedirles mi información a Spotify con el fin de hacer unas cuantas gráficas con ella.
 

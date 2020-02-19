@@ -25,19 +25,12 @@
                     {% endif %}
                     <section class="post">
                         <header class="post-header">
-                            <a href="{{ article.original_url }}"> View original {{ article.original_url }}</a>
                             <h3><a class="post-title" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
-                            <p class="post-meta">{{ article.summary }}</p>
-                        {% if HIDE_CATEGORIES %}
-                            <p class="post-meta">// under {% for tag in article.tags %}
-                                <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-                                {% endfor %} &middot; {{ article.locale_date }}
+                            <p>
+                                <span class="post-meta">Originally <a href="{{ article.original_url }}">posted on {{ article.original_url | hostname }}</a> &middot;</span>
+                                {{ article.short_summary }}
+                                <span class="post-meta">&middot; {{ article.locale_date }}</span>
                             </p>
-                        {% else %}
-                            <p class="post-meta">
-                                in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> &middot; {{ article.locale_date }}
-                            </p>
-                        {% endif %}
                         </header>
                     </section>
                 {% endfor %}
