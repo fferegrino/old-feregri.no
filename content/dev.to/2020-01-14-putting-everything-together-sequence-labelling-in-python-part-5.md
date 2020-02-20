@@ -3,7 +3,7 @@ layout: post
 language: en
 original_url: https://dev.to/fferegrino/putting-everything-together-sequence-labelling-in-python-part-5-19ng
 title: Putting everything together - Sequence labelling in Python (part 5) 
-date: 2019-08-06 14:00:00
+date: 2020-01-14 14:00:00
 tags: python, data-science, nlp
 short_summary: Let's prepare our algorithm pipeline for new flight offers.
 ---  
