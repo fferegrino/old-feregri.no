@@ -6,6 +6,7 @@ from custom_filters.urls import hostname
 
 AUTHOR = 'Antonio Feregrino'
 SITENAME = 'Antonio Feregrino'
+TAGLINE = 'data science and software development'
 SITEURL = ''
 
 PATH = 'content'
