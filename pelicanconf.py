@@ -1,4 +1,8 @@
-from __future__ import unicode_literals
+
+import sys
+import os
+sys.path.append(os.curdir)
+from custom_filters.urls import hostname
 
 AUTHOR = 'Antonio Feregrino'
 SITENAME = 'Antonio Feregrino'
@@ -38,11 +42,6 @@ COVER_IMG_URL="/images/cover.jpg"
 PROFILE_IMG_URL="/images/head.jpg"
 
 # Filters
-
-from urllib.parse import urlparse
-
-def hostname(uri):
-    url = urlparse(uri)
-    return url.netloc
-
-JINJA_FILTERS = {'hostname':hostname}
+JINJA_FILTERS = {
+    'hostname': hostname
+}

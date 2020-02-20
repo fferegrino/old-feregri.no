@@ -4,6 +4,7 @@
     <div class="pure-u">
         <div class="content">
             <!-- A wrapper for all the blog posts -->
+            {% include 'language_bars.html' %}
             <div class="posts">
                 <h1 class="content-subhead">
                     {% block pagetitle %}
@@ -27,9 +28,11 @@
                         <header class="post-header">
                             <h3><a class="post-title" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
                             <p>
-                                <span class="post-meta">Originally <a href="{{ article.original_url }}">posted on {{ article.original_url | hostname }}</a> &middot;</span>
-                                {{ article.short_summary }}
-                                <span class="post-meta">&middot; {{ article.locale_date }}</span>
+                                {{ article.short_summary }} &middot;
+                                {% if article.original_url %}
+                                <span class="post-meta" data-site="{{ article.original_url | hostname }}">Originally <a href="{{ article.original_url }}">posted to {{ article.original_url | hostname }}</a> on</span>
+                                {% endif %}
+                                <span class="post-meta">{{ article.locale_date }}.</span>
                             </p>
                         </header>
                     </section>

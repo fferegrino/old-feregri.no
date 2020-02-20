@@ -1,0 +1,21 @@
+
+  div.tags {
+    width: 100%;
+  }
+  a.tag{
+    height: 15px;
+    margin:0;
+    padding:0;
+    position:relative;
+    display: none;
+    visibility: hidden;
+  }
+  a.tag:last-child{
+    border-radius: 0px 5px 5px 0px;
+  }
+  a.tag:first-child{
+    border-radius: 5px 0px 0px 5px;
+  }
+  a.tag:hover{
+    text-decoration: none;
+  }

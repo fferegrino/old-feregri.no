@@ -25,10 +25,12 @@
     {% if FAVICON_URL %}
     <link href="{{ FAVICON_URL }}" rel="icon">
     {% endif %}
-
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/tags.css">
     {% block head_css %}{% endblock %}
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -97,6 +99,43 @@
         $('body').on('click', 'a[href="#"]', function(event) {
             event.preventDefault();
         });
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    let arr = Array.from(document.querySelectorAll(".tag"));
+    let colors = {
+      "csharp": "#3C8A3F",
+      "python": "#356B98",
+      "nlp": "#32A69C",
+      "data-science": "#8941B3"
+    }
+    let mySet = new Set(Object.keys(colors));
+    var totalTags = 0;
+
+
+    arr.forEach(function (item, index) {
+      if(mySet.has(item.dataset["tag"])) {
+        totalTags += parseInt(item.dataset["count"])
+        item.style.display ="inline-block";
+      }
+    });
+
+    arr.forEach(function (item, index) {
+      let tag = item.dataset["tag"];
+      if(mySet.has(tag)) {
+        let percentage = parseInt(item.dataset["count"]) / totalTags * 100;
+        item.style.width = percentage + "%";
+        item.style.display ="inline-block";
+        item.style.visibility ="visible";
+        item.style.backgroundColor =colors[tag];
+      }
+      else {
+        item.parentNode.removeChild(item);
+      }
+    });
+  });
+  
     </script>
     {% include 'analytics.html' %}
 </body>
