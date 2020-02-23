@@ -34,6 +34,7 @@
                         </p>
                 </header>
             </section>
+            {% if article.youtube %}<iframe src="https://www.youtube.com/embed/{{ article.youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>{% endif %}
             {{ article.content }}
             <a href="#" class="go-top">Go Top</a>
             {% include 'disqus.html' %}
