@@ -20,7 +20,3 @@ DELETE_OUTPUT_DIRECTORY = True
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
-
-# Theme
-COVER_IMG_URL="https://i.imgur.com/icFY0WL.jpg"
-PROFILE_IMG_URL="https://i.imgur.com/6kbOP9f.jpg"

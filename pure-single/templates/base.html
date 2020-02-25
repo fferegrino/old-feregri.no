@@ -72,6 +72,13 @@
                                     </a>
                             {% endfor %}
                                 </p>
+                            {% if OTHER_BLOGS %}
+                            <div class="extra-links">
+                                {% for title, link in OTHER_BLOGS %}
+                                    <a target="_blank" class="tiny-link" title="{{title}}" href="{{ link }}">{{title}}</a>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
                         </hgroup>
                     </header>
                 </div>

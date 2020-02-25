@@ -30,6 +30,11 @@ SOCIAL = (
     ('linkedin', 'https://www.linkedin.com/in/antonioferegrino/'),
 )
 
+OTHER_BLOGS = (
+    ("That C# Guy", "https://thatcsharpguy.com"),
+    ("Personal blog", "https://fferegrino.org"),
+)
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
@@ -39,8 +44,8 @@ STATIC_CONTENT=[
     "images"
 ]
 THEME = "pure-single"
-COVER_IMG_URL="/images/cover.jpg"
-PROFILE_IMG_URL="/images/head.jpg"
+COVER_IMG_URL="https://i.imgur.com/icFY0WL.jpg"
+PROFILE_IMG_URL="https://i.imgur.com/6kbOP9f.jpg"
 
 # Filters
 JINJA_FILTERS = {
