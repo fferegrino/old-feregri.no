@@ -11,13 +11,12 @@ logger = logging.getLogger(__name__)
 
 __all__ = ['register']
 
-DATE_FORMAT = "%m/%d/%Y, %H:%M:%S"
 
 def set_default_settings(settings):
     settings.setdefault('ALGOLIA_APP_ID', None)
     settings.setdefault('ALGOLIA_SEARCH_API_KEY', None)
     settings.setdefault('ALGOLIA_ADMIN_API_KEY', None)
-    settings.setdefault('ALGOLIA_INDEX_NAME', 'blog')
+    settings.setdefault('ALGOLIA_INDEX_NAME', None)
 
 def init_default_config(pelican):
     set_default_settings(DEFAULT_CONFIG)
@@ -49,8 +48,12 @@ def index_generator(generator):
     app_id = generator.settings.get('ALGOLIA_APP_ID', None)
     admin_api_key = generator.settings.get('ALGOLIA_ADMIN_API_KEY', None)
     
-    client = SearchClient.create('', '')
-    index = client.init_index('dev-feregrino.dev')
+    if not any([index_name, app_id, admin_api_key]):
+        logger.error("Missing parameters")
+        return
+
+    client = SearchClient.create(app_id, admin_api_key)
+    index = client.init_index(index_name)
 
     settings = {
         'searchableAttributes': [

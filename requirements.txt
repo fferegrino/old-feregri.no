@@ -1,3 +1,5 @@
-pelican
+algoliasearch
+beautifulsoup4
 markdown
-
+pelican
+python-decouple
