@@ -3,6 +3,7 @@ import sys
 import os
 sys.path.append(os.curdir)
 from custom_filters.urls import hostname
+from plugins.algolia import algolia_search
 
 AUTHOR = 'Antonio Feregrino'
 SITENAME = 'Antonio Feregrino'
@@ -51,3 +52,5 @@ PROFILE_IMG_URL="https://i.imgur.com/6kbOP9f.jpg"
 JINJA_FILTERS = {
     'hostname': hostname
 }
+
+PLUGINS = [algolia_search]
