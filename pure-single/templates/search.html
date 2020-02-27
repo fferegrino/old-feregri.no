@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% block title %}{{ page.title|striptags }} // {{ super() }}{% endblock title %}
+
+{% block head_js %}
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.0/dist/algoliasearch-lite.umd.js" integrity="sha256-MfeKq2Aw9VAkaE9Caes2NOxQf6vUa8Av0JqcUXUGkd0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="pure-u">
+        <div class="content">
+            <h1 class="content-subhead">{{ page.title }} &middot; <a href="/index.html"><i class="fa fa-home" aria-hidden="true"></i></a></h1>
+            <p>{{ page.content }}</p>
+
+            {% if DISQUS_ON_PAGES %}
+            {% include 'disqus.html' %}
+            {% endif %}
+
+            {% include 'footer.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block footer_js %}
+<script>
+    var app_id = "{{ ALGOLIA_APP_ID }}";  
+    var search_api_key = "{{ ALGOLIA_SEARCH_API_KEY }}";  
+    var index_name = "{{ ALGOLIA_INDEX_NAME }}";  
+</script>
+{% raw %}
+    <script>
+        const searchClient = algoliasearch(app_id, search_api_key);
+
+        const search = instantsearch({
+            indexName: index_name,
+            searchClient,
+        });
+
+            search.addWidgets([
+                instantsearch.widgets.searchBox({
+                    container: '#searchbox',
+                }),
+
+                instantsearch.widgets.hits({
+                    container: '#hits',
+                    templates: {
+                        item: ` <section class="post">
+                                    <header class="post-header">
+                                        <h3><a class="post-title" href='/{{url}}'>{{#helpers.highlight}}{ "attribute": "title", "highlightedTagName": "mark" }{{/helpers.highlight}}</a></h3>
+                                        <p>
+                                            {{#helpers.highlight}}{ "attribute": "summary", "highlightedTagName": "mark" }{{/helpers.highlight}}
+                                        </p>
+                                    </header>
+                                <section>`
+                        }
+                })
+            ]);
+
+            search.start();
+    </script>
+    {% endraw %}
+{% endblock %}

@@ -1,11 +1,11 @@
 ---
 layout: post
-language: en
+language: es
 youtube: bmO3lEXu6lI
 title: Las diferencias entre ciencia de datos e ingeniería de software
 date: 2020-02-25 10:00:00
-short_summary: In this post, I will show you how to play with your Spotify listening data; we will copy a beautiful plot inspired by GitHub.
-tags: data-science, software-engineering, off-topic
+short_summary: Mi opinión sobre algunas de las diferencias entre la ciencia de datos y el dearrollo de software.
+tags: data-science, software-engineering, off-topic, youtube
 ---
 
 Estas son las notas que hice para este video, pueden tener errores ortográficos; advertido estás.

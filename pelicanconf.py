@@ -1,8 +1,10 @@
 
 import sys
 import os
+from decouple import config
 sys.path.append(os.curdir)
 from custom_filters.urls import hostname
+from plugins.algolia import algolia_search
 
 AUTHOR = 'Antonio Feregrino'
 SITENAME = 'Antonio Feregrino'
@@ -37,6 +39,15 @@ OTHER_BLOGS = (
 
 DEFAULT_PAGINATION = 10
 
+# Algolia
+if config("BRANCH", default="not-master") == "master":
+    ALGOLIA_INDEX_NAME = config("ALGOLIA_INDEX_NAME")
+else:
+    ALGOLIA_INDEX_NAME = "dev-" + config("ALGOLIA_INDEX_NAME")
+ALGOLIA_ADMIN_API_KEY = config("ALGOLIA_ADMIN_API_KEY")
+ALGOLIA_SEARCH_API_KEY = config("ALGOLIA_SEARCH_API_KEY")
+ALGOLIA_APP_ID = config("ALGOLIA_APP_ID")
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
@@ -51,3 +62,5 @@ PROFILE_IMG_URL="https://i.imgur.com/6kbOP9f.jpg"
 JINJA_FILTERS = {
     'hostname': hostname
 }
+
+PLUGINS = [algolia_search]
