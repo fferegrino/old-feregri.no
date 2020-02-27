@@ -43,7 +43,7 @@ DEFAULT_PAGINATION = 10
 if config("BRANCH", default="not-master") == "master":
     ALGOLIA_INDEX_NAME = config("ALGOLIA_INDEX_NAME")
 else:
-    ALGOLIA_INDEX_NAME = config("BRANCH", default="dev") + "-" + config("ALGOLIA_INDEX_NAME")
+    ALGOLIA_INDEX_NAME = "dev-" + config("ALGOLIA_INDEX_NAME")
 ALGOLIA_ADMIN_API_KEY = config("ALGOLIA_ADMIN_API_KEY")
 ALGOLIA_SEARCH_API_KEY = config("ALGOLIA_SEARCH_API_KEY")
 ALGOLIA_APP_ID = config("ALGOLIA_APP_ID")
