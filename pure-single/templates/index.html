@@ -17,6 +17,7 @@
                     {% if articles_page.has_previous() %}
                         &ndash; Page&nbsp;{{ articles_page.number }}
                     {% endif %}
+                    &middot; <a href="/pages/search.html"><i class="fa fa-search" aria-hidden="true"></i></a>
                 </h1>
                 {% for article in articles_page.object_list %}
                     {# Include's latex math only if an article in the index has it present #}

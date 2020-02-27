@@ -45,6 +45,7 @@ if config("BRANCH", default="not-master") == "master":
 else:
     ALGOLIA_INDEX_NAME = config("BRANCH", default="dev") + "-" + config("ALGOLIA_INDEX_NAME")
 ALGOLIA_ADMIN_API_KEY = config("ALGOLIA_ADMIN_API_KEY")
+ALGOLIA_SEARCH_API_KEY = config("ALGOLIA_SEARCH_API_KEY")
 ALGOLIA_APP_ID = config("ALGOLIA_APP_ID")
 
 # Uncomment following line if you want document-relative URLs when developing
