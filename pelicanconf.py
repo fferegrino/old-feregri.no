@@ -40,7 +40,7 @@ OTHER_BLOGS = (
 DEFAULT_PAGINATION = 10
 
 # Algolia
-if config("BRANCH") == "master":
+if config("BRANCH", default="not-master") == "master":
     ALGOLIA_INDEX_NAME = config("ALGOLIA_INDEX_NAME")
 else:
     ALGOLIA_INDEX_NAME = config("BRANCH", default="dev") + "-" + config("ALGOLIA_INDEX_NAME")

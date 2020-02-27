@@ -62,7 +62,7 @@ def index_generator(generator):
             'unordered(tags)'
         ],
         "ranking": [
-            "asc(created)",
+            "desc(created)",
         ],
         "customRanking": [
             "desc(title)",
