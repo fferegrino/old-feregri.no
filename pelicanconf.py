@@ -5,6 +5,7 @@ from decouple import config
 sys.path.append(os.curdir)
 from custom_filters.urls import hostname
 from plugins.algolia import algolia_search
+from plugins.books import book_pages_generator
 
 AUTHOR = 'Antonio Feregrino'
 SITENAME = 'Antonio Feregrino'
@@ -63,4 +64,10 @@ JINJA_FILTERS = {
     'hostname': hostname
 }
 
-PLUGINS = [algolia_search]
+PLUGINS = [algolia_search, book_pages_generator]
+
+ARTICLE_EXCLUDES = ['pages', 'books']
+
+BOOKS_PATH = "books"
+BOOK_SAVE_AS = "book/{slug}.html"
+BOOK_URL = "book/{slug}.html"
