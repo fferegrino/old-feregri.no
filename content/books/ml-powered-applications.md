@@ -6,13 +6,13 @@ date: 2020-08-06 14:00:00
 short_summary: A book about what are the pieces around an application that uses machine learning at its core, a good insight into what is beyond training models.
 ---  
 
-This is a book about the whole process of putting a machine learning model into production, all the engineering that sometimes the data scientists are not aware of or take for granted. It does not explain any algorithms or how to train a model but what to do before and after we have already trained one. I highly recommend getting this book, specially if you are:   
+This is a book about the whole process of putting a machine learning model into production, all the engineering that sometimes the data scientists are not aware of or take for granted. It does not explain any algorithms or how to train a model but what to do before and after we have already trained one. I highly recommend getting this book, especially if you are:   
 
  - About to start a new machine learning development
  - Coming from the engineering side of software  
- - Want to know what does it take for your new model to become production ready
+ - Want to know what does it take for your new model to become production-ready
 
-The book itself is light on code, there is a GitHub repo that the author uses to showcase an entire use case throughout the whole book, however it is possible to just read the book without the need to look at the code, since the code is not the main reason someone would buy this book.
+The book itself is light on code; there is a GitHub repo that the author uses to showcase an entire use case throughout the whole book. However, it is possible to just read the book without the need to look at the code since it is not the main reason someone would buy this book.
 
 Get the book: <a href="https://www.amazon.com.mx/Building-Machine-Learning-Powered-Applications/dp/149204511X" target="_blank">Amazon Mexico</a>, <a href="https://www.amazon.com/Building-Machine-Learning-Powered-Applications/dp/149204511X" target="_blank">Amazon US</a>
 
