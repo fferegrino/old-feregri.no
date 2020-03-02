@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="pure-u">
+        <div class="content">
+            <div class="posts">
+                <h1 class="content-subhead">
+                    {{ collection_name }}
+                </h1>
+                {% for item in collection %}
+                    <section class="post">
+                        <header class="post-header">
+                            <h3><a class="post-title" href="{{ SITEURL }}/{{ item.url }}">{{ item.title }}</a></h3>
+                            <p>
+                                {{ item.short_summary }}
+                            </p>
+                        </header>
+                    </section>
+                {% endfor %}
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
