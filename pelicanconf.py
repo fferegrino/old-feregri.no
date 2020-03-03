@@ -53,7 +53,10 @@ ALGOLIA_APP_ID = config("ALGOLIA_APP_ID")
 #RELATIVE_URLS = True
 
 STATIC_CONTENT=[
-    "images"
+    "images", 
+]
+STATIC_PATHS = [
+    'robots.txt', 'favicon.ico'
 ]
 THEME = "pure-single"
 COVER_IMG_URL="https://i.imgur.com/icFY0WL.jpg"
