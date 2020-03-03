@@ -5,6 +5,11 @@
 <meta property="og:title" content="{{ item.title }} // {{ SITENAME }}" />
 <meta property="og:description" content="{{ item.short_summary }}" />
 <meta property="og:url" content="{{ SITEURL }}/{{ item.url }}" />
+{% if item.sidebarimage %}
+<meta property="og:image" content="{{ item.sidebarimage }}" />
+{% else %}
+{{ super() }}
+{% endif %}
 <meta property="og:book:author" content="{{ item.author }}" />
 <meta property="og:book:isbn" content="{{ item.isbn }}" />
 {% endblock %}
