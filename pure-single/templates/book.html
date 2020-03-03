@@ -1,6 +1,18 @@
 {% extends 'index.html' %}
 {% block sidebar %}{% if item.sidebarimage %}{{ item.sidebarimage }}{% else %}{{ super() }}{% endif %}{% endblock %}
 {% block title %}{{ item.title|striptags }} // {{ super() }}{% endblock title %}
+{% block og_metadata %}
+<meta property="og:title" content="{{ item.title }} // {{ SITENAME }}" />
+<meta property="og:description" content="{{ item.short_summary }}" />
+<meta property="og:url" content="{{ SITEURL }}/{{ item.url }}" />
+{% if item.sidebarimage %}
+<meta property="og:image" content="{{ item.sidebarimage }}" />
+{% else %}
+{{ super() }}
+{% endif %}
+<meta property="og:book:author" content="{{ item.author }}" />
+<meta property="og:book:isbn" content="{{ item.isbn }}" />
+{% endblock %}
 
 {% block content %}
 <div class="pure-u">
@@ -8,6 +20,9 @@
         <section class="post">
             <header class="post-header">
                 <h1>{{ item.title }}</h1>
+                <p class="post-meta">
+                    Author: {{ item.author }} &middot; ISBN: {{ item.isbn }}
+                </p>
             </header>
         </section>
         {{ item.content }}

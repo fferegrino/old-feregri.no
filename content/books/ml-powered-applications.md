@@ -2,8 +2,12 @@
 template: book
 original_url: https://dev.to/fferegrino/versioning-any-app-with-python-bij
 title: Building Machine Learning Powered Applications
+author: Emmanuel Ameisen
+isbn: 9781492045106
 date: 2020-08-06 14:00:00
 short_summary: A book about what are the pieces around an application that uses machine learning at its core, a good insight into what is beyond training models.
+sidebarimage: https://i.imgur.com/1olZiIn.jpg
+tags: software development, machine learning, oreilly
 ---  
 
 This is a book about the whole process of putting a machine learning model into production, all the engineering that sometimes the data scientists are not aware of or take for granted. It does not explain any algorithms or how to train a model but what to do before and after we have already trained one. I highly recommend getting this book, especially if you are:   
