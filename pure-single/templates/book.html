@@ -2,8 +2,9 @@
 {% block sidebar %}{% if item.sidebarimage %}{{ item.sidebarimage }}{% else %}{{ super() }}{% endif %}{% endblock %}
 {% block title %}{{ item.title|striptags }} // {{ super() }}{% endblock title %}
 {% block og_metadata %}
-<meta name="og:description" content="{{ item.short_summary }}" />
-<meta property="og:url" content="{{ item.url }}" />
+<meta property="og:title" content="{{ item.title }} // {{ SITENAME }}" />
+<meta property="og:description" content="{{ item.short_summary }}" />
+<meta property="og:url" content="{{ SITEURL }}/{{ item.url }}" />
 {% endblock %}
 
 {% block content %}

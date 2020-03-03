@@ -10,7 +10,7 @@ from plugins.collections import collections_page_generator
 AUTHOR = 'Antonio Feregrino'
 SITENAME = 'Antonio Feregrino'
 TAGLINE = 'data science and software development'
-SITEURL = ''
+SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
 
