@@ -79,7 +79,10 @@ def index_generator(generator):
         object_id = hashlib.sha256(str(article_data["slug"]).encode('utf-8')).hexdigest()
         article_data["objectID"] = object_id
         current_ids.add(object_id)
-        index.save_object(article_data)
+        try:
+            index.save_object(article_data)
+        except:
+            logger.exception("unable to index %s" % article_data["slug"])
         logger.info(f"Indexing {article_data['url']}")
     pass
 
