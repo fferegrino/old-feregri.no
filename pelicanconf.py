@@ -79,6 +79,14 @@ COLLECTIONS = [
         "item_url": "books/{slug}.html",
         "item_template": "book",
         "index_location": "books"
+    },
+    {
+        "name": "Reads",
+        "folder": "reads",
+        "item_save_as": "reads/{slug}.html",
+        "item_url": "reads/{slug}.html",
+        "item_template": "book",
+        "index_location": "index"
     }
 ]
 ARTICLE_EXCLUDES = ['pages'] + [
