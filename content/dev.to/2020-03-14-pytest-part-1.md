@@ -1,13 +1,6 @@
 ---
 title: Unit testing with pytest
 published: false
-short_summary: I will show you how to generate a dataset from email data, and how to push it to both AWS and Kaggle; all this with Python and some wonderful packages.
-tags: pytest, moto, aws, python
----
-
----
-title: Unit testing with pytest
-published: false
 description: I will show you how to generate a dataset from email data, and how to push it to both AWS and Kaggle; all this with Python and some wonderful packages.
 tags: pytest, moto, aws, python
 ---
@@ -16,15 +9,15 @@ tags: pytest, moto, aws, python
 
 Throughout this post I will be testing functions from the code I wrote to [scrape emails and upload the information to Kaggle](https://dev.to/fferegrino/how-to-automate-dataset-creation-with-python-171a) however, it is not necessary that you read that post first, but it will give more context to the code being tested here.
 
-## What is pytest?  
-Pytest is a testing framework for Python that supports automatic collection of tests, simple asserts, support for test fixtures and state management, debugging capabilities and many things more. Do not worry if some of those terms make little sense to you, I will try to clarify them as we go along the post.
+## What is *pytest*?  
+*pytest* is a testing framework for Python that supports automatic collection of tests, simple asserts, support for test fixtures and state management, debugging capabilities and many things more. Do not worry if some of those terms make little sense to you, I will try to clarify them as we go along the post.
 
-By the way, pytest is not the only testing framework available: nose, doctest, testify... but pytest is the one I use and the one I know most about.
+By the way, *pytest* is not the only testing framework available: nose, doctest, testify... but *pytest* is the one I use and the one I know most about.
 
 ## Writing our tests
 
 ## Parametrising our tests 
-Let's start by writing a simple test: single input, single output, no calls to any external service. I am talking about a function that takes an encoded string (like `=?UTF-8?B?VGhlcmXigJlz?= more to the story`) and returns a human readable sentence (like `There’s more to the story`), I am talkig about the [`get_subject` method](https://github.com/fferegrino/medium-collector/blob/v0.0.0/medium_collector/download/parser.py#L12):
+Let's start by writing a simple test: single input, single output, no calls to any external service. I am talking about a function that takes an encoded string (like `=?UTF-8?B?VGhlcmXigJlz?= more to the story`) and returns a human readable sentence (like `There’s more to the story`), I am talking about the [`get_subject` method](https://github.com/fferegrino/medium-collector/blob/v0.0.0/medium_collector/download/parser.py#L12):
 
 ```python
 def get_subject(subject):
@@ -76,12 +69,12 @@ def test_get_subject(input_subject, expected):
     assert actual == expected
 ```
 
-The above code will effectively instruct pytest execute the test `test_get_subject` three times, each time replacing `input_subject`, `expected` for the corresponding values specified in the second argument of `parametrize`. 
+The above code will effectively instruct *pytest* execute the test `test_get_subject` three times, each time replacing `input_subject`, `expected` for the corresponding values specified in the second argument of `parametrize`. 
 
 ## Fixtures
 Some of the time we may have **tests that need to start from a certain state**, this state may mean having data in a database, having some files on a certain location, or maybe just having the right object as input to the function. That is when fixtures come in handy.  
 
-For example, in the *medium-collector* app I mentioned at the top of the post, there is a method called `parse_mail` that, as the name suggests, we can use to extract information from an object of the class `email.message.Message`.  Have a quick glance at a simplified version of the method's implementaiton:
+For example, in the *medium-collector* app I mentioned at the top of the post, there is a method called `parse_mail` that, as the name suggests, we can use to extract information from an object of the class `email.message.Message`.  Have a quick glance at a simplified version of the method's implementation:
 
 ```python
 def parse_mail(email_message):
@@ -137,7 +130,7 @@ def test_parse_mail(dummy_mail):
 The way *pytest* works is by resolving the fixtures first, before any test that uses them is run, and once they are ready, the test method gets executed receiving the values of the fixtures it uses. This mechanism allows some very interesting uses that I will cover in a few sections below.
 
 ### An extra feature with fixtures  
-Pytest fixtures are just great, another use is when we want to reuse the same piece of code in two or more test methods, imagine we needed to use a `Message` for two test methods. We could have simply declared a global variable, say `MESSAGE = MIMEMultipart("alternative")`  and then use it in our methods like: 
+*pytest* fixtures are just great, another use is when we want to reuse the same piece of code in two or more test methods, imagine we needed to use a `Message` for two test methods. We could have simply declared a global variable, say `MESSAGE = MIMEMultipart("alternative")`  and then use it in our methods like: 
 
 ```python
 def test_parse_mail_1():
@@ -149,10 +142,10 @@ def test_parse_mail_2():
 	# ...
 ```
 
-But in this case both our tests would be using the same variable `MESSAGE`, that means that any change made by `test_parse_mail_1` would affect the `MESSAGE` that `test_parse_mail_2` receives, this breaks the purpose of unit testing as our tests would not be isolated anymore.  However, when we use fixtures, each test method will receive a *fresh* copy of the return value specified by the fixture body, making it easy to reuse them over and over again.
+But in this case both our tests would be using the same variable `MESSAGE`, that means that any change made by `test_parse_mail_1` would affect the `MESSAGE` that `test_parse_mail_2` receives, this breaks the purpose of unit testing as our tests would not be isolated any more.  However, when we use fixtures, each test method will receive a *fresh* copy of the return value specified by the fixture body, making it easy to reuse them over and over again.
 
 ## Patching
-Without a doubt some parts of our code will rely on third party libaries or external services that we do not want to execute or contact while running our tests; whether it be because the library you are calling consumes a lot of resources or it is a production system that should not be touched while testing. Here is when patching come in handy; it helps us in replacing the functionality of a function call with whatever we want to.
+Without a doubt some parts of our code will rely on third party libraries or external services that we do not want to execute or contact while running our tests; whether it be because the library you are calling consumes a lot of resources or it is a production system that should not be touched while testing. Here is when patching come in handy; it helps us in replacing the functionality of a function call with whatever we want to.
 
 Imagine that the function `get_html` code is a very *"expensive"* one, and we don't want to execute every time we execute the `test_parse_mail` we could just patch it (I must say, patching is not a feature of *pytest* itself, it comes with python inside the module `unittest.mock`).
 
@@ -174,18 +167,18 @@ def test_parse_mail(dummy_mail):
     patched.assert_called_once()
     assert mail_info == expected_mail_info
     assert decoded == "Hello"
-```
+```  
+In the previous snippet, we are patching the function and assigning it `"Hello"` as its `return_value`, that is a value that must be returned every that function is called. Now that our function is not called, we can make sure we did call it by asserting it was, each `patch` instance  offers a set of methods that make it easy for us to find out whether they were called, how many times they were called, as well as the arguments used to invoke them; for now we just check it was called with `assert_called_once`.
 
-
-
-### Dangers of overpatching
+### Perils of patching
 Patching may look like an easy solution to avoid contacting external services or expensive function calls, however, you must know that you are making some big assumptions about the code being patched:  
- - You know the expected bahavior of the code being patched (you know what it returns and how it fails). 
+ - You know the expected behaviour of the code being patched (you know what it returns and how it fails). 
  - You are able to realistically mock any return value of the code being patched. 
+
+When patching just be aware that what you are patching may return a complex type that is really hard to mimic, and patching it badly may result on testing against a scenario your code will not find 
+
 
 ## Advanced fixtures
 
 
 ## Going beyond unit tests
-
-
