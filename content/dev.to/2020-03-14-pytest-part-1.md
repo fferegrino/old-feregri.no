@@ -1,8 +1,11 @@
 ---
+layout: post
+language: en
 title: Unit testing with pytest
-published: false
-description: I will show you how to generate a dataset from email data, and how to push it to both AWS and Kaggle; all this with Python and some wonderful packages.
-tags: pytest, moto, aws, Python
+short_summary: I will talk you through how is it possible to use pytest to test a real world app, using fixtures, patches and even mocking AWS.
+date: 2020-03-09 10:00:00
+original_url: https://dev.to/fferegrino/unit-testing-with-pytest-161h
+tags: pytest, moto, aws, python
 ---
 
 #### Disclaimer
@@ -22,7 +25,7 @@ pip install pytest
 
 ## Writing our tests  
 
-To create test functions that *pytest* recognises automatically it is necessary to create them with `test_` as a name prefix. We need to name them like that since when we execute *pytest* we must specify a root directory, from this directory, *pytest* will read all our files (within this directory), in search of the `test_`-prefixed functions. For example, if you have a look at the [*medium-collector* repo](https://github.com/fferegrino/medium-collector), you will see that all the tests are contained within the appropriately named `tests` folder. To execute them all we need to do is to call *pytest* with the folder name as an argument, and it will automatically traverse this directory searching for our tests:
+To create test functions that *pytest* recognises automatically it is necessary to create them with `test_` as a name prefix. We need to name them like that since when we execute *pytest* we must specify a root directory, from this directory, *pytest* will read all our files (within this directory), in search of the `test_`-prefixed functions. For example, if you have a look at the [*medium-collector* repo](https://github.com/fferegrino/medium-collector), you will see that all the tests are contained within the appropriately named `tests` folder. To execute them, all we need to do is to call *pytest* with the folder name as an argument, and it will automatically traverse this directory searching for our tests:
 
 ```shell
 pytest tests/
@@ -43,7 +46,7 @@ def get_subject(subject):
     return "".join(subject_parts)
 ```
 
-So to write a test using *pytest* is just as easy as:
+To write a test using *pytest* is just as easy as:
 
 ```python
 def test_get_subject():
@@ -59,17 +62,17 @@ import pytest
 @pytest.mark.parametrize(
     ["input_subject", "expected"],
     [
-    # Input 1
+        # Input 1
         (
             "=?UTF-8?B?V2hlbiBhICQxMDAsMDAwIFNhbGFyeSBJc27igJl0IEVub3VnaCB8IEFkYW0gUGFyc29ucyBpbiBNYWtpbmcgb2YgYSBNaWxsaW8=?= =?UTF-8?B?bmFpcmU=?=",
             "When a $100,000 Salary Isn’t Enough | Adam Parsons in Making of a Millionaire",
         ),
-    # Input 2
+        # Input 2
         (
             "=?UTF-8?B?VGhlcmXigJlz?= more to the story", 
             "There’s more to the story"
-    ),
-    # Input 3
+        ),
+        # Input 3
         (
             "7 Things Rich People Advise But Never Do | David O. in The Startup",
             "7 Things Rich People Advise But Never Do | David O. in The Startup",
