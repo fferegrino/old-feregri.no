@@ -1,18 +1,16 @@
 ---
 layout: post
-language: en
+language: es
 original_url: https://dev.to/fferegrino/how-to-automate-dataset-creation-with-python-171a
 title: Generación automática de datasets con Python
 date: 2020-03-11 10:00:00
-short_summary: I will show you how to generate a dataset from email data, and how to push it to both AWS and Kaggle; all this with Python and some wonderful packages.
-tags: kaggle, python, medium
----
+short_summary: Te muestro cómo puedes publicar un dataset en Kaggle de forma automática, exlplicándote cómo puedes leer correos electrónicos y extraer información de ellos usando; todo esto usando Python.
+tags: kaggle, python, detrasdelavisualización
+---  
 
-## ¿Por qué decidí hacer esto?
+## Detrás de la visualización  
 
-He estado tratando de crear un conjunto de datos relacionado con publicaciones medianas, a pesar de que ya hay algunas disponibles. Sin embargo, parece que se centran en ciertos temas, o simplemente demasiado pequeños; Quería que mi conjunto de datos fuera algo diferente pero aún relacionado con Medium...
-
-En cuanto a los datos, ciertamente no estoy seguro de si el conjunto de datos será útil para alguien, pero espero que la forma en que lo construí con Python sea útil para cualquiera con datos más importantes.
+Sé que Tacos de Datos está enfocado principalmente al resultado visual, pero creo que es importante tratar de resaltar qué es lo que hay detrás de. Quisiera inaugurar esta sección que llamaré *"Detrás de la visualización"* para cubrir temas de extracción, procesamiento y almacenamiento de datos; en pocas palabras: ingeniería de datos. *Y es que, bueno, además de preparar los tacos, también es bueno saber cómo conseguir los ingredientes.*
 
 PD: Mira cuál es el resultado de lo que estoy explicando aquí: [Medium Daily Digests on Kaggle](https://www.kaggle.com/ioexception/medium-daily-digests).
 
@@ -23,6 +21,9 @@ Entonces, si quería que mi conjunto de datos fuera único y diferente, tenía q
 Con eso en mente, me propuse crear 20 cuentas de correo electrónico diferentes (en realidad son alias para una sola cuenta) y luego usar cada una de ellas para suscribirse al mentado "Medium Daily Digest", cada cuenta asociada con cinco diferentes (pero un tanto relacionados) temas. Y desde entonces he estado recibiendo 20 correos electrónicos, todos los días con títulos, subtítulos y URLs de posts.
 
 De vez en cuando inicio sesión en esas cuentas, abro algunos correos electrónicos para evitar que dichas cuentas se eliminen de la sindicación de Medium [porque esta gente sabe cuándo no lees sus correos electrónicos]((https://www.theverge.com/2019/7/3/20681508/tracking-pixel-email-spying-superhuman-web-beacon-open-tracking-read-receipts-location)). También es de esperarse que los temas que ofrecen puedan cambiar con el tiempo, y en algún momento los intereses asociados de algunas cuentas pueden cambiar, en ese caso tendré que iniciar sesión en Medium y modificar las cuentas  manualmente, pero en su mayor parte la recopilación de datos se ejecuta de manera automática. 
+
+Por cierto, no estoy seguro de si el conjunto de datos será útil para alguien, pero espero que la forma en que lo construí con Python sea útil para cualquiera con datos más importantes.
+
 
 ## Leyendo los correos del servidor 
 
