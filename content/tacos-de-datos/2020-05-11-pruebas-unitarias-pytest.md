@@ -187,18 +187,17 @@ def test_parse_mail(dummy_mail):
     assert decoded == "Hello"
 ```  
 
-En el fragmento anterior estamos *"parchando"* la función y estableciendo el valor de `"Hello"` como su valor de retorno con `return_value`. Esto significa que `"Hello"` será regresado cada vez que la función es ejecutada. Ahora que la función original no es realmente ejecutada; podemos asegurarnos de que esto pase mediante una 
+En el fragmento anterior estamos *"parchando"* la función y estableciendo el valor de `"Hello"` como su valor de retorno con `return_value`. Esto significa que `"Hello"` será regresado cada vez que la función es ejecutada. Ahora que la función original no es realmente ejecutada, es importante que nos cercioremos que nuestro código está llamando a esta función, para esto podemos utilizar el método `assert_called_once` para verificar que lo hemos llamado.  
 
-In the previous snippet, we are patching the function and assigning it `"Hello"` as its `return_value`, that is a value that must be returned every that function is called. Now that our function is not called, we can make sure we did call it by asserting it was, each `patch` instance offers a set of methods that make it easy for us to find out whether they were called, how many times they were called, as well as the arguments used to invoke them; for now we check it was called with `assert_called_once`.
+### Los peligros del *patching*  
+El *parcheo* podría parecer una solución fácil para evitar conectarse con servicios externos o llamadas a funciones costosas. Pero debes tener en cuenta que cuando *parchamos* algo, estamos asumiendo muchas cosas sobre el código que estamos *parchando*, estas asunciones son:
 
-### Perils of patching
-Patching may look like an easy solution to avoid contacting external services or expensive function calls. However, you must know that you are making some significant assumptions about the code being patched:  
- - You know the expected behaviour of the code being patched (you know what it returns and how it fails). 
- - You can realistically mock any return value of the code being patched. 
+ - Sabemos el comportamiento esperado del código que estamos *parchando*, es decir, sabemos sus valores de retorno y bajo que circunstancias falla.
+ - Puedes, con completa seguridad, regresar un objeto que se comporte como el valor que originalmente sería retornado por la función real.
 
-When patching be aware that what you are patching may return a complex type that is hard to mimic, and patching it badly may result on you testing against a scenario your code will not find in real life. To overcome this, you may have to examine with detail what are the return values of what you are patching to do it correctly.
+Cuando aplicas un parche a una función, toma en cuenta que esta puede retornar un valor "complejo" que sea difícil de reproducir, y que *"parcharlo"* mal resultaría en tu código siendo probado ante un escenario que nunca ocurrirá en la vida real. Para evitar esto, tal vez tengas que examinar muy a detalla cuales son los valores de retorno de lo que estás *"parchando"* con el fin de hacerlo correctamente.
 
-Another common problem with patching is that at some point we may get carried over and just end up patching everything... which again, makes up for tests that are not really testing scenarios that your code will not find. If you find yourself doing this, it is probably worth reconsidering if unit testing is the right approach for that specific piece of code, maybe an integration test is better in that case.
+Otro problema muy común con el *patching* es que en nos podemos dejar llevar y terminar *"parchando"* todo... lo que, a final de cuentas nos pone en la situación de estar probando nuestro código en escenarios poco realistas. Si en algun momento te encuentras haciendo esto, es mejor que te detengas y reconsideres si las pruebas unitarias son la mejor solución para probar tu código... tal vez las pruebas de integración sean una mejor solución para tu problema de *testing*.
 
 ## *"Advanced"* fixtures
 As mentioned before, the way *pytest* resolves the fixtures can be used to give our code more flexibility. In the *medium-collector* app there is a function that uploads some files to an S3 bucket using the *boto* library, this is the function `upload_files`, which looks somewhat like this:
