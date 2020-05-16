@@ -2,6 +2,25 @@
 {% block sidebar %}{% if article.sidebarimage %}{{ article.sidebarimage }}{% else %}{{ super() }}{% endif %}{% endblock %}
 {% block title %}{{ article.title|striptags }} // {{ super() }}{% endblock title %}
 
+{% block og_metadata %}
+    <!-- Article tags -->
+    <meta property="og:title" content="{{ article.title }} // {{ SITENAME }}" />
+    <meta property="og:description" content="{{ article.short_summary | escape }}" />
+    <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+    {% if article.sidebarimage %}
+        <meta property="og:image" content="{{ article.sidebarimage }}" />
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@io_exception">
+    <meta name="twitter:creator" content="@io_exception">
+    <meta name="twitter:title" content="{{ article.title }} // {{ SITENAME }}">
+    <meta name="twitter:description" content="{{ article.short_summary | escape }}">
+    {% if article.sidebarimage %}
+        <meta name="twitter:image" content="{{ article.sidebarimage }}" />
+    {% endif %}
+    <!-- Article tags end -->
+{% endblock %}
+
 {% block head_css %}
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
 {% endblock %}
@@ -28,7 +47,7 @@
                 <header class="post-header">
                     <h1>{{ article.title }}</h1>
                         <p class="post-meta">
-                            // under {% for tag in article.tags %}
+                            // tags {% for tag in article.tags %}
                                 <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
                             {% endfor %}
                         </p>
