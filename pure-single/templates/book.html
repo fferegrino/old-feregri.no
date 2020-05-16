@@ -1,27 +1,24 @@
 {% extends 'index.html' %}
 {% block sidebar %}{% if item.sidebarimage %}{{ item.sidebarimage }}{% else %}{{ super() }}{% endif %}{% endblock %}
 {% block title %}{{ item.title|striptags }} // {{ super() }}{% endblock title %}
+
 {% block og_metadata %}
-<meta property="og:title" content="{{ item.title }} // {{ SITENAME }}" />
-<meta property="og:description" content="{{ item.short_summary }}" />
-<meta property="og:url" content="{{ SITEURL }}/{{ item.url }}" />
-{% if item.sidebarimage %}
-<meta property="og:image" content="{{ item.sidebarimage }}" />
-{% else %}
-{{ super() }}
-{% endif %}
-<meta property="og:book:author" content="{{ item.author }}" />
-<meta property="og:book:isbn" content="{{ item.isbn }}" />
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@io_exception">
-<meta name="twitter:creator" content="@io_exception">
-<meta name="twitter:title" content="{{ item.title }} // {{ SITENAME }}">
-<meta name="twitter:description" content="{{ item.short_summary }}">
-{% if item.sidebarimage %}
-<meta name="twitter:image" content="{{ item.sidebarimage }}" />
-{% else %}
-{{ super() }}
-{% endif %}
+    <!-- Item tags -->
+    <meta property="og:title" content="{{ item.title }} // {{ SITENAME }}" />
+    <meta property="og:description" content="{{ item.short_summary | escape }}" />
+    <meta property="og:url" content="{{ SITEURL }}/{{ item.url }}" />
+    {% if item.sidebarimage %}
+        <meta property="og:image" content="{{ item.sidebarimage }}" />
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@io_exception">
+    <meta name="twitter:creator" content="@io_exception">
+    <meta name="twitter:title" content="{{ item.title }} // {{ SITENAME }}">
+    <meta name="twitter:description" content="{{ item.short_summary | escape }}">
+    {% if item.sidebarimage %}
+        <meta name="twitter:image" content="{{ item.sidebarimage }}" />
+    {% endif %}
+    <!-- Item tags end -->
 {% endblock %}
 
 {% block content %}
