@@ -1,3 +1,4 @@
+
 ### Requerimientos  
 
 En este caso, vamos a usar *GPG* para protegerlos, si no tienes `gpg` instalada en tu Mac, la puedes instalar con `
@@ -8,23 +9,33 @@ Una contraseña (vamos a llamarla `DECRYPT_KEY`) para encriptar archivos mediant
 ### Obteniendo un certificado de publicación para iOS
 Te recomiendo generar un certificado de publicación para cada app que desarrolles, aunque, este certificado lo puedes compartir entre varias, puesto que este certificado te identifica a ti como quien publica la app. En este caso, será el servidor de GitHub el que publique y al que tu le estarás dando permiso de autenticarse como tu.
 
-Para generar un certificado nuevo, visita https://developer.apple.com/account/resources/certificates/list
+Para generar un certificado nuevo, visita https://developer.apple.com/account/resources/certificates/list, elige "Crear un nuevo certificado" y selecciona "Apple Distribution":
 
 ![Imgur](https://imgur.com/b6T6YYw.png)
-![Imgur](https://imgur.com/5qY5Pud.png)
-![Imgur](https://imgur.com/8gXr4m8.png)![Imgur](https://i.imgur.com/3oeJOBI.png)
 Una vez creado, descarga el certificado e instálalo en tu computadora. Para instalarlo simplemente da doble click en el archivo que acabas de descargar.
 
 ![Imgur](https://i.imgur.com/XXThK37.png)
 El siguiente paso es crear y descargar un perfil de publicación para tu app:
+
 ![Imgur](https://i.imgur.com/6CodfmN.png)
+Elige "Distribution" y "App Store":
+
 ![Imgur](https://i.imgur.com/TbrqVrY.png)
+Elige después el identificador de tu aplicación:
+
 ![Imgur](https://i.imgur.com/0eCLTi0.png)
+Asegurate también que elijas el certificado adecuado, justamente el que creamos en el paso anterior.
+
 ![Imgur](https://i.imgur.com/pIKkXbl.png)
+Establece un nombre descriptivo, y genera el perfil de publicación.
+
 ![Imgur](https://i.imgur.com/peJlpOZ.png)
 Siguiente paso es descargar y abrir el perfil de publicación, si Xcode no está abierto, el abrir el perfilde publicación lo abrirá. Una vez hecho esto, podemos configurar nuestra app para usarlos al momento de crear el archivo que vamos a publicar en la app store.
 
 ## Configura tu app para usar los certificados
+
+El siguiente paso es configurar tu aplicación de Xamarin.iOS (o tu aplicación de iOS normal), la opción a elegir en Xamarin es "iOS Bundle Signing", asegurate de que en la Configuración esté seleccionada la opción `Release` y de que como plataforma esté elegida `iPhone`. Luego entonces selecciona el certificado y el perfil de aprovisionamiento que acabamos de crear.
+
 ![Imgur](https://i.imgur.com/zJGWRBu.png)
 
 
@@ -78,19 +89,19 @@ rm Certificates.p12
 rm f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision
 ```
 
-### Desencriptando el certificado en GitHub
+### Desencriptando el acertificado en GitHub
 
+ - Desencriptar los secretos usando el password almacenado en "DECRYPT_KEY"
+ 
 ```bash
-#!/bin/sh
-
-# iOS
-
-## Desencriptar los secretos usando el password almacenado en "DECRYPT_KEY"
 gpg --quiet --batch --yes --decrypt --passphrase="$DECRYPT_KEY" --output ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision.gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$DECRYPT_KEY" --output ./secrets/Certificates.p12 ./secrets/Certificates.p12.gpg
+```
 
+```bash
 ## Crea la carpeta "Provisioning Profiles" en esta computadora
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+```
 
 ## Copia el perfil de publicación a la carpeta recién creada
 cp ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision
@@ -106,13 +117,10 @@ security unlock-keychain -p "" ~/Library/Keychains/build.keychain
 security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
 ```
 
-Dar permisos de ejecución
+Todas las instrucciones anteriores debemos colocarlas en un archivo llamado `decrypt_secrets.sh` dentro de nuestra carpeta `secrets`, no te olvides de darle permisos de ejecución a este archivo mediante el siguiente comando:
+
 ```
 chmod +x secrets/decrypt_secrets.sh
 ```
 
-# Configurando GitHub  
-
- 
-
-
+# Configurando GitHub
