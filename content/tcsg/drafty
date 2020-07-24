@@ -1,0 +1,118 @@
+### Requerimientos  
+
+En este caso, vamos a usar *GPG* para protegerlos, si no tienes `gpg` instalada en tu Mac, la puedes instalar con `
+brew install gpg`.
+
+Una contraseña (vamos a llamarla `DECRYPT_KEY`) para encriptar archivos mediante *gpg*, te recomiendo que sea generada automáticamente. Genérala y tenla a la mano porque la vamos a utilizar unas cuantas veces en este post.
+
+### Obteniendo un certificado de publicación para iOS
+Te recomiendo generar un certificado de publicación para cada app que desarrolles, aunque, este certificado lo puedes compartir entre varias, puesto que este certificado te identifica a ti como quien publica la app. En este caso, será el servidor de GitHub el que publique y al que tu le estarás dando permiso de autenticarse como tu.
+
+Para generar un certificado nuevo, visita https://developer.apple.com/account/resources/certificates/list
+
+![Imgur](https://imgur.com/b6T6YYw.png)
+![Imgur](https://imgur.com/5qY5Pud.png)
+![Imgur](https://imgur.com/8gXr4m8.png)![Imgur](https://i.imgur.com/3oeJOBI.png)
+Una vez creado, descarga el certificado e instálalo en tu computadora. Para instalarlo simplemente da doble click en el archivo que acabas de descargar.
+
+![Imgur](https://i.imgur.com/XXThK37.png)
+El siguiente paso es crear y descargar un perfil de publicación para tu app:
+![Imgur](https://i.imgur.com/6CodfmN.png)
+![Imgur](https://i.imgur.com/TbrqVrY.png)
+![Imgur](https://i.imgur.com/0eCLTi0.png)
+![Imgur](https://i.imgur.com/pIKkXbl.png)
+![Imgur](https://i.imgur.com/peJlpOZ.png)
+Siguiente paso es descargar y abrir el perfil de publicación, si Xcode no está abierto, el abrir el perfilde publicación lo abrirá. Una vez hecho esto, podemos configurar nuestra app para usarlos al momento de crear el archivo que vamos a publicar en la app store.
+
+## Configura tu app para usar los certificados
+![Imgur](https://i.imgur.com/zJGWRBu.png)
+
+
+## Colocando los certificados en GitHub
+ > 🚨⚠️ ¡Mucho cuidado! ¡asegúrate de no subir ninguno de los siguientes archivos a menos de que estén encriptados! ⚠️🚨
+
+### Exportando el certificado  
+
+![Imgur](https://i.imgur.com/G0pF2C0.png)
+![Imgur](https://i.imgur.com/hByhz7g.png)
+Guarda el archivo con el nombre `Certificates.p12` dentro de la carpeta `secrets`.
+
+![Imgur](https://i.imgur.com/5gT22K6.png)
+### Exportando los perfiles de publicación 
+
+Lo primero es descubrir cuál es el perfil de publicación que corresponde al que acabamos de descargar, para hacerlo, lista los perfiles con el siguiente comando:
+```
+ls -lah ~/Library/MobileDevice/Provisioning\ Profiles/
+```
+
+En este caso, el más reciente es el que corresponde al perfil de publicación de nuestra app, tiene el identificador `f3b9e904-6d99-409a-91f4-440c5b79565d`:
+
+![Imgur](https://i.imgur.com/9cEkq9v.png)
+El siguiente paso es copiar el perfil a la carpeta `secrets`. 
+
+```
+cp ~/Library/MobileDevice/Provisioning\ Profiles/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision secrets
+```
+Toma nota de este identificador porque lo verás en muchos lados, el mío es `f3b9e904-6d99-409a-91f4-440c5b79565d` pero el tuyo sera diferente.
+
+### Encriptando nuestros secretos  
+
+Como lo mencioné al inicio de esta sección, no podemos subir nuestros secretos (léase el certificado y el perfil de publciación) así como así a GitHub, antes hay que protegerlos mediante la encriptación. Usaremos *gpg* y la contraseña que creaste al inicio de este post.
+
+```
+gpg --symmetric --cipher-algo AES256 Certificates.p12
+```
+
+```
+gpg --symmetric --cipher-algo AES256 f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision
+```
+
+```
+Certificates.p12.gpg
+f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision.gpg
+```
+
+
+```
+rm Certificates.p12
+rm f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision
+```
+
+### Desencriptando el certificado en GitHub
+
+```bash
+#!/bin/sh
+
+# iOS
+
+## Desencriptar los secretos usando el password almacenado en "DECRYPT_KEY"
+gpg --quiet --batch --yes --decrypt --passphrase="$DECRYPT_KEY" --output ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision.gpg
+gpg --quiet --batch --yes --decrypt --passphrase="$DECRYPT_KEY" --output ./secrets/Certificates.p12 ./secrets/Certificates.p12.gpg
+
+## Crea la carpeta "Provisioning Profiles" en esta computadora
+mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+
+## Copia el perfil de publicación a la carpeta recién creada
+cp ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision
+
+## Crea un Keychain e importa el archivo Certificates.p12
+security create-keychain -p "" build.keychain
+security import ./secrets/Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "" -A
+
+## Establece el Keychain recien creado como default
+security list-keychains -s ~/Library/Keychains/build.keychain
+security default-keychain -s ~/Library/Keychains/build.keychain
+security unlock-keychain -p "" ~/Library/Keychains/build.keychain
+security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/build.keychain
+```
+
+Dar permisos de ejecución
+```
+chmod +x secrets/decrypt_secrets.sh
+```
+
+# Configurando GitHub  
+
+ 
+
+
