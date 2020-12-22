@@ -27,7 +27,11 @@
                     {% endif %}
                     <section class="post">
                         <header class="post-header">
+                            {% if article.original_url %}
+                            <h3><a class="post-title" href="{{ article.original_url }}">{{ article.title }}</a></h3>
+                            {% else %}
                             <h3><a class="post-title" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+                            {% endif %}
                             <p>
                                 {{ article.short_summary }} &middot;
                                 {% if article.original_url %}

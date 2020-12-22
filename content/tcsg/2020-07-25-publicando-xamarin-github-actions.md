@@ -3,6 +3,7 @@ layout: post
 lannguage: es
 title: Publicando aplicaciones hechas con Xamarin desde GitHub Actions
 date: 2020-07-25 12:00:00
+original_url: https://thatcsharpguy.com/posts/2020-07-25-publicando-xamarin-github-actions.html
 author: Antonio Feregrino
 short_summary: Aplica la integración continua a tus aplicaciones hechas con Xamarin y publica desde GitHub Actions.
 lang: es
