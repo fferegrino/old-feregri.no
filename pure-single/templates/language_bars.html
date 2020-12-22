@@ -1,3 +1,12 @@
+
+<div class="navs">
+  <ul>
+      <li class="youtube"><a href="https://www.youtube.com/thatcsharpguy">YouTube</a></li>
+      <li class="twitter"><a href="https://twitter.com/io_exception">@io_exception</a></li>
+      <li class="tcsg"><a href="https://thatcsharpguy.com">That C# guy</a></li>
+      <li class="kodekai"><a href="https://kodekai.com">kode kai</a></li>
+  </ul>
+</div>
 <div class="tags">
   {% for tag, articles in tags|sort %}<a class="tag" title="{{ tag }} {{ articles|count }}" data-tag="{{ tag }}" data-count="{{ articles|count }}" href="{{ SITEURL }}/{{ tag.url }}"></a>{% endfor %}
 </div>

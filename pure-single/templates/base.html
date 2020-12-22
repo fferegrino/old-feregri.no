@@ -147,7 +147,7 @@
                 if(mySet.has(tag)) {
                     let postCount = parseInt(item.dataset["count"])
                     let percentage = postCount / totalTags * 100;
-                    item.setAttribute("data-tippy-content", postCount + " posts in " + tag + " (" + percentage + "%)");
+                    item.setAttribute("data-tippy-content", postCount + " posts in " + tag + " (" + Math.trunc(percentage) + "%)");
                     item.style.width = percentage + "%";
                     item.style.display ="inline-block";
                     item.style.visibility ="visible";

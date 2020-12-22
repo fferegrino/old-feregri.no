@@ -307,3 +307,8 @@ pre {
         background-position: 0;
     }
 }
+
+/** Extras */
+li {
+    display: inline-block;
+}
