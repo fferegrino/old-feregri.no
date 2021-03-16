@@ -19,6 +19,11 @@
         <meta name="twitter:image" content="{{ article.sidebarimage }}" />
     {% endif %}
     <!-- Article tags end -->
+
+    {% if article.original_url %}
+    <link rel="canonical" href="{{ article.original_url }}" />
+    <meta name="robots" content="noindex" />
+    {% endif %}
 {% endblock %}
 
 {% block head_css %}
