@@ -2,13 +2,10 @@ import sys
 import os
 sys.path.append(os.curdir)
 
-# This file is only used if you use `make publish` or
-# explicitly specify it as your config file.
-
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = 'https://feregrino.dev'
+SITEURL = 'https://feregri.no' # feregrino.dev also should work
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'

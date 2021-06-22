@@ -1,4 +1,3 @@
-
 import sys
 import os
 from decouple import config
@@ -29,7 +28,7 @@ AUTHOR_FEED_RSS = None
 SOCIAL = (
     ('github', 'https://github.com/fferegrino/'),
     ('twitter-square', 'https://twitter.com/io_exception'),
-    ('youtube', 'https://www.youtube.com/channel/UC8KCb358oioQMcJ5pUfs8UQ'),
+    ('youtube', 'https://www.youtube.com/thatcsharpguy'),
     ('linkedin', 'https://www.linkedin.com/in/antonioferegrino/'),
 )
 
