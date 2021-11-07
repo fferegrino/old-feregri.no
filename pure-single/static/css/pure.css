@@ -309,6 +309,6 @@ pre {
 }
 
 /** Extras */
-li {
+li.nav {
     display: inline-block;
 }
