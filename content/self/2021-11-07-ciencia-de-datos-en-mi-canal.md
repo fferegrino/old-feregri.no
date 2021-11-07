@@ -4,7 +4,8 @@ language: es
 title: Ciencia de datos en mi canal de YouTube
 date: 2021-11-07 10:00:00
 short_summary: En mi canal he publicado ya más de 200 videos, en este post te doy una idea del orden en que puedes verlos para entender más sobre la ciencia de datos.
-tags: mlops, data-science
+tags: youtube, data-science
+sidebarimage: https://i.imgur.com/icFY0WL.jpg
 ---  
 
 En mi canal he publicado ya más de 200 videos, hablando de diferentes temas, entre ellos muchos relacionados a la ciencia de datos sin embargo, no tienen un orden específico; en este post trato de darte una pequeña guía de los videos que puedes encontrar en mi canal y el orden en que puedes verlos para entender sobre la ciencia de datos:
@@ -19,6 +20,7 @@ En mi canal he publicado ya más de 200 videos, hablando de diferentes temas, en
   6. [**Tipos de variables en la ciencia de datos**](https://youtu.be/SAWsQ3QmmJE) – Antes de comenzar con modelos, algoritmos y código, debes saber qué tipos de variables existen
   7. [**Breve introducción al análisis exploratorio de datos**](https://youtu.be/s7A1OxEeT6o) – La base de todo proyecto exitoso es hacer un buen análisis de datos
   3. [**Machine Learning**](https://youtu.be/KwjQQcx7sMA) – ¿Qué es el *machine learning*?
+  3. [**Cómo NO aprender MACHINE LEARNING**](https://youtu.be/rceZhveizdM) – Muchos te dicen cómo puedes aprender *machine learning*, yo en este video te digo cómo no aprenderlo
   3. [**Diferencia entre Algoritmo y Modelo en Machine Learning**](https://youtu.be/fwwnzOPxiVs) – Un modelo no es lo mismo que un algoritmo, en este video te explico las diferencias.
   3. [**¿Inteligencia Artificial? ¿Machine Learning? ¿Redes Neuronales?**](https://youtu.be/-d3ecbdEyPM) – Existe una relación directa entre estos tres conceptos, ¡no significan lo mismo!
   7. [**Machine Learning: train / validate / test**](https://youtu.be/778Pa63FS78) – La importancia de dividir nuestros datos en estos tres conjuntos de información
@@ -31,5 +33,19 @@ En mi canal he publicado ya más de 200 videos, hablando de diferentes temas, en
   9. [**Las redes neuronales - sobresimplificadas**](https://youtu.be/61tdl0zSsT4) – Una sencilla y sobre-simplificada introducción a las redes neuronales
   9. [**Machine learning: Las métricas de la regresión**](https://youtu.be/vTTL0WD1e7w) – ¿Cómo medimos el desempeño de un modelod de regresión?
   9. [**Machine learning: Las métricas de la clasificación**](https://youtu.be/E-zICBXTqzs) – ¿Cómo medimos el desempeño de un modelod de clasificación?
+
+Además de que hice un montón de transmisiones hablando sobre los fundamentos de datos, lo que necesitas saber si quieres meterte un poco más profundo en el mundo del *machine learning*:
+
+ - 00: Introducción al curso, [https://youtu.be/RT1VpNAwEWg](https://youtu.be/RT1VpNAwEWg)
+ - 00a: Jupyter y Docker, [https://youtu.be/ppl2y4iP2yE](https://youtu.be/ppl2y4iP2yE)
+ - 01: Jupyter Lab, [https://youtu.be/QclZayjU8K8](https://youtu.be/QclZayjU8K8)
+ - 02: Cómputo vectorizado, [https://youtu.be/iLIQykiASs4](https://youtu.be/iLIQykiASs4)
+ - 02a: Más funcionalidades de NumPy - Data Fundamentals, [https://youtu.be/0_QIYyMBZN0](https://youtu.be/0_QIYyMBZN0)
+ - 03: Números y NumPy, [https://youtu.be/YwHQC4KEtBE](https://youtu.be/YwHQC4KEtBE)
+ - 04: Haciendo buenas gráficas, [https://youtu.be/7vZY6JdswKs](https://youtu.be/7vZY6JdswKs)
+ - 05: Vectores y Álgebra Lineal, [https://youtu.be/bgEML8Re2ks](https://youtu.be/bgEML8Re2ks)
+ - 06: Matrices y Álgebra Lineal, [https://youtu.be/Vdn-8j8yFSk](https://youtu.be/Vdn-8j8yFSk)
+ - 07: Optimización I, [https://youtu.be/tzKtffhJ31Y](https://youtu.be/tzKtffhJ31Y)
+ - 08: Optimización II, [https://youtu.be/J4eCD38WF5k](https://youtu.be/J4eCD38WF5k)
 
 ¡Espero los disfrutes!
