@@ -56,8 +56,8 @@ STATIC_PATHS = [
     'robots.txt', 'favicon.ico'
 ]
 THEME = "pure-single"
-COVER_IMG_URL="https://i.imgur.com/icFY0WL.jpg"
-PROFILE_IMG_URL="https://i.imgur.com/6kbOP9f.jpg"
+COVER_IMG_URL="https://ik.imagekit.io/thatcsharpguy/feregri_no/sidebar_ZtRSpq7HJM.jpg?updatedAt=1637790559197"
+PROFILE_IMG_URL="https://ik.imagekit.io/thatcsharpguy/feregri_no/pfp_EpoeHfoKQZ.jpg?updatedAt=1637790988278"
 
 # Filters
 JINJA_FILTERS = {

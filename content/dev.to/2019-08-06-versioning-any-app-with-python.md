@@ -153,7 +153,7 @@ Line by line:
 
 This will generate exactly two commits and a new tag in our repo, something like this:  
 
-![](https://thepracticaldev.s3.amazonaws.com/i/c784wykevy23itlc0lx4.PNG)  
+![Commit and tags](https://thepracticaldev.s3.amazonaws.com/i/c784wykevy23itlc0lx4.PNG)  
 
 ### Icing on the cake  
 
