@@ -44,7 +44,7 @@ sns.lineplot(x, y, ax = ax)
 ax.set_title("Cumulative Distribution")
 ```
 
-![](https://i.imgur.com/CFTusWs.png)
+![Cumulative distribution](https://i.imgur.com/CFTusWs.png)
 
 El siguiente paso es definir cuál va a ser el inicio de nuestra animación. En mi caso, yo quiero que la gráfica comience con un solo dato, del lado izquierdo de la gráfica. Y cada cuadro de la animación iré agregando un nuevo punto. Por ejemplo, este será el punto inicial:
 
@@ -66,7 +66,7 @@ for i in range(2, timesteps + 2):
     ax.set_title(f"Frame {i}")
 ```
 
-![](https://i.imgur.com/UpQAUg7.png)
+![Line plot](https://i.imgur.com/UpQAUg7.png)
 
 La idea clave es que en la animación, cada *frame* debe ser una gráfica "nueva", cuando presentamos una gráfica después de otra dará la ilusión de que la gráfica se está moviendo (sí, de la misma manera en la que imagenes estáticas presentadas rápidamente crean un video).
 
@@ -121,7 +121,7 @@ Y... ¡eso es todo! Solo para recordar el concepto principal: **Piensa en tus an
 ### Bonus  
 Con un poco de trabajo extra se pueden hacer cosas un tanto más complejas, como la animación que muestro a continuación (son distribuciones de probabilidad):
 
-![](https://i.imgur.com/8ON2Bq0.gif)
+![Una distribución de probabilidad](https://i.imgur.com/8ON2Bq0.gif)
 
 No me voy a detener a hablar tanto del código, pero lo dejo ahí para que juegues con él. Me puedes contactar en los comentarios, o en [@io_exception en Twitter](https://twitter.com/io_exception) si tienes dudas sobre él.
 
@@ -156,7 +156,7 @@ for distribution in distributions:
     sns.distplot(distribution)
 ```
 
-![](https://i.imgur.com/c8T1Bap.gif)
+![Animando distribuciones](https://i.imgur.com/c8T1Bap.gif)
 
 En este caso, cree las animaciones yo mismo, guardando los valores para cada punto de la gráfica en un arreglo llamado `frame_contents` usando `cycle` para iterar sobre las distribuciones.
 

@@ -5,7 +5,6 @@ title: Ciencia de datos en mi canal de YouTube
 date: 2021-11-07 10:00:00
 short_summary: En mi canal he publicado ya más de 200 videos, en este post te doy una idea del orden en que puedes verlos para entender más sobre la ciencia de datos.
 tags: youtube, data-science
-sidebarimage: https://i.imgur.com/icFY0WL.jpg
 ---  
 
 En mi canal he publicado ya más de 200 videos, hablando de diferentes temas, entre ellos muchos relacionados a la ciencia de datos sin embargo, no tienen un orden específico; en este post trato de darte una pequeña guía de los videos que puedes encontrar en mi canal y el orden en que puedes verlos para entender sobre la ciencia de datos:
