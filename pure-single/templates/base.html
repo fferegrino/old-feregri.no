@@ -42,7 +42,6 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <script src="https://kit.fontawesome.com/0271495296.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/tags.css">
     {% block head_css %}{% endblock %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     {% block head_js %}{% endblock %}
@@ -94,8 +93,6 @@
         {% block content %}
         {% endblock %}
     </div>
-    <script src="https://unpkg.com/popper.js@1"></script>
-    <script src="https://unpkg.com/tippy.js@5"></script>
     {% block footer_js %}{% endblock %}
     {% include 'analytics.html' %}
 </body>
