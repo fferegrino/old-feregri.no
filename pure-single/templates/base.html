@@ -43,7 +43,7 @@
     <script src="https://kit.fontawesome.com/0271495296.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure.css">
     {% block head_css %}{% endblock %}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script async src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     {% block head_js %}{% endblock %}
 </head>
 
@@ -59,7 +59,7 @@
                     <header class="header">
                         <hgroup>
                             {% if PROFILE_IMG_URL %}
-                            <img class="avatar" src="{{ PROFILE_IMG_URL }}">
+                            <img class="avatar" width="100px" src="{{ PROFILE_IMG_URL }}">
                             {% endif %}
                             <h1 class="brand-main"><a href="/">{{ SITENAME }}</a></h1>
                             <p class="tagline">{{ TAGLINE }}</p>
