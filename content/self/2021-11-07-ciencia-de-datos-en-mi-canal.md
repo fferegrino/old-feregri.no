@@ -32,6 +32,7 @@ En mi canal he publicado ya más de 200 videos, hablando de diferentes temas, en
   9. [**Las redes neuronales - sobresimplificadas**](https://youtu.be/61tdl0zSsT4) – Una sencilla y sobre-simplificada introducción a las redes neuronales
   9. [**Machine learning: Las métricas de la regresión**](https://youtu.be/vTTL0WD1e7w) – ¿Cómo medimos el desempeño de un modelod de regresión?
   9. [**Machine learning: Las métricas de la clasificación**](https://youtu.be/E-zICBXTqzs) – ¿Cómo medimos el desempeño de un modelod de clasificación?
+  9. [**Tips para tu primer trabajo en la ciencia de datos**](https://youtu.be/8Ko8ynK-9QM) – ¿Vas a buscar tu primer trabajo como científico de datos? acá te doy unos tips
 
 Además de que hice un montón de transmisiones hablando sobre los fundamentos de datos, lo que necesitas saber si quieres meterte un poco más profundo en el mundo del *machine learning*:
 
