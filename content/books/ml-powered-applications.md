@@ -1,6 +1,5 @@
 ---
 template: book
-original_url: https://dev.to/fferegrino/versioning-any-app-with-python-bij
 title: Building Machine Learning Powered Applications
 author: Emmanuel Ameisen
 isbn: 9781492045106
