@@ -27,7 +27,7 @@
 {% endblock %}
 
 {% block head_css %}
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments{% if DEV %}.min{% endif %}.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments{% if not DEV %}.min{% endif %}.css">
 {% endblock %}
 
 {% block head_js %}

@@ -41,7 +41,7 @@
     {% endif %}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <script src="https://kit.fontawesome.com/0271495296.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure{% if DEV %}.min{% endif %}.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pure{% if not DEV %}.min{% endif %}.css">
     {% block head_css %}{% endblock %}
     <script async src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     {% block head_js %}{% endblock %}
