@@ -5,6 +5,7 @@ sys.path.append(os.curdir)
 from custom_filters.urls import hostname
 from plugins.algolia import algolia_search
 from plugins.collections import collections_page_generator
+from plugins.cssminifier import toptal_minifier
 
 AUTHOR = 'Antonio Feregrino'
 SITENAME = 'Antonio Feregrino'
@@ -64,7 +65,10 @@ JINJA_FILTERS = {
     'hostname': hostname
 }
 
-PLUGINS = [algolia_search, collections_page_generator]
+
+DEV = 1
+
+PLUGINS = [algolia_search, collections_page_generator, toptal_minifier]
 
 ARTICLE_EXCLUDES = ['pages', 'books']
 

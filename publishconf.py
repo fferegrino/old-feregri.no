@@ -8,6 +8,8 @@ from pelicanconf import *
 SITEURL = 'https://feregri.no'
 RELATIVE_URLS = False
 
+DEV = 0
+
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
