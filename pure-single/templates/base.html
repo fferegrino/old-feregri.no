@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% block og_metadata %}
-    <meta property="og:description" content="{% block meta_description %}{{ SITENAME }}, {{ TAGLINE }}{% endblock meta_description %}" />
+    <meta property="og:description" content="{{ SITENAME }}, {{ TAGLINE }}" />
     <meta property="og:image" content="https://i.imgur.com/Bw0xa30.jpg" />
     <meta property="og:title" content="{{ SITENAME }} // {{ TAGLINE }}" />
     <meta property="og:url" content="{{ SITEURL }}" />
@@ -17,6 +17,7 @@
     <meta name="twitter:title" content="{{ SITENAME }} // {{ TAGLINE }}">
     <meta name="twitter:description" content="{{ SITENAME }}, {{ TAGLINE }}">
     <meta name="twitter:image" content="https://i.imgur.com/Bw0xa30.jpg" />
+    <meta name="description" content="{% block meta_description %}{{ SITENAME }}, {{ TAGLINE }}{% endblock meta_description %}" />
     {% endblock og_metadata %}
 
     {% if FEED_ALL_ATOM %}

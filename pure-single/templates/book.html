@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 {% block sidebar %}{% if item.sidebarimage %}{{ item.sidebarimage }}{% else %}{{ super() }}{% endif %}{% endblock %}
-{% block title %}{{ item.title|striptags }} // {{ super() }}{% endblock title %}
+{% block title %}{{ item.title|striptags }} // {{ SITENAME }}{% endblock title %}
 
 {% block og_metadata %}
     <!-- Item tags -->
@@ -19,6 +19,7 @@
         <meta name="twitter:image" content="{{ item.sidebarimage }}" />
     {% endif %}
     <!-- Item tags end -->
+    <meta name="description" content="{{ item.short_summary | escape }}">
 {% endblock %}
 
 {% block content %}

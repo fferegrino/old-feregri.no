@@ -2,6 +2,23 @@
 
 {% block title %}{% if articles_page %}{% if articles_page.number == 1 %}{{ SITENAME }} // {{ TAGLINE }}{% else %}{{ SITENAME }} - Page {{ articles_page.number }}{% endif %}{% else %}{{ SITENAME }} – Untitled Page{% endif %}{% endblock title %}
 
+
+{% block og_metadata %}
+<meta property="og:description" content="{% if articles_page %}{{ SITENAME }} // page {{ articles_page.number }}{% else %}{{ SITENAME }} – Untitled Page{% endif %}" />
+<meta property="og:image" content="https://i.imgur.com/Bw0xa30.jpg" />
+<meta property="og:title" content="{% if articles_page %}{% if articles_page.number == 1 %}{{ SITENAME }} // {{ TAGLINE }}{% else %}{{ SITENAME }} - Page {{ articles_page.number }}{% endif %}{% else %}{{ SITENAME }} – Untitled Page{% endif %}" />
+<meta property="og:url" content="{{ SITEURL }}" />
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@io_exception">
+<meta name="twitter:creator" content="@io_exception">
+<meta name="twitter:title" content="{% if articles_page %}{% if articles_page.number == 1 %}{{ SITENAME }} // {{ TAGLINE }}{% else %}{{ SITENAME }} - Page {{ articles_page.number }}{% endif %}{% else %}{{ SITENAME }} – Untitled Page{% endif %}">
+<meta name="twitter:description" content="{% if articles_page %}{{ SITENAME }} // page {{ articles_page.number }}{% else %}{{ SITENAME }} – Untitled Page{% endif %}">
+<meta name="twitter:image" content="https://i.imgur.com/Bw0xa30.jpg" />
+<meta name="description" content="{% if articles_page %}{{ SITENAME }} // page {{ articles_page.number }}{% else %}{{ SITENAME }} – Untitled Page{% endif %}" />
+{% endblock og_metadata %}
+
 {% block content %}
     <div class="pure-u">
         <div class="content">
