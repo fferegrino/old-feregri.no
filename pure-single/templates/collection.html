@@ -6,9 +6,10 @@
     <div class="pure-u">
         <div class="content">
             <div class="posts">
-                <h1 class="content-subhead">
-                    {{ collection_name }}
-                </h1>
+                {% include 'header.html' %}
+                <header class="post-header">
+                    <h1>{{ collection_name }}</h1>
+                </header>
                 {% for item in collection %}
                     <section class="post">
                         <header class="post-header">
