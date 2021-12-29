@@ -10,7 +10,7 @@ tags: data-science
 
 Si tienes como propósito acercarte a la ciencia de datos en este 2022 hice una recopilación de pensamientos (unos que ya había descrito anteriormente) y otros que apenas pongo por escrito. Aquí te ofrezco unos cuantos consejos y recursos desde mi experiencia personal que espero sean de ayuda para la tuya.
 
-Inspirado en el [hilo de Xavier Carrera](https://twitter.com/XaviGrowth/status/1475590298835292163): “Si tuviera que aprender Data Science desde 0 otra vez en 2022, eso es lo que haría", te recomiendo que también le eches un ojo porque ese vale mucho la pena.
+ > 👀 Inspirado en el [hilo de Xavier Carrera](https://twitter.com/XaviGrowth/status/1475590298835292163): “Si tuviera que aprender Data Science desde 0 otra vez en 2022, eso es lo que haría", te recomiendo que también le eches un ojo a su Tweet porque vale mucho mucho la pena.
 
 # Conoce qué clase de trabajos en datos hay
 
@@ -38,7 +38,7 @@ La verdad es que enfrentarte a esos problemas cuando vas comenzando lo único qu
 
 Como tal te digo **no te preocupes por montar el ambiente de desarrollo perfecto**, para comenzar puedes usar alternativas gratuitas que ya están configuradas para ti, por ejemplo: Los [Notebooks de Kaggle](https://www.kaggle.com/code), los notebooks de [Google Colab](https://colab.research.google.com/) y el más reciente [AWS StudioLab](https://studiolab.sagemaker.aws/).
 
-Ahora, si quieres saber sobre entornos virtuales en Python, tengo [un video al respecto](https://www.youtube.com/watch?v=GM-RcOaGN4w). 
+ > Ahora, si quieres saber sobre entornos virtuales en Python, tengo [un video al respecto](https://www.youtube.com/watch?v=GM-RcOaGN4w). 
 
 # No te preocupes tanto por las matemáticas
 
@@ -48,7 +48,7 @@ Llegará un momento en el que tengas que adentrarte a investigar más a detalle 
 
 Habiendo dicho esto, no creas que con conocer las APIs de SciKit-Learn es suficiente, si bien los frameworks hacen el programar para machine learning sea muy sencillo, no debes confundir el llamar simplemente a `.fit` con crear un modelo que va a funcionar en producción.
 
-Por si te lo perdiste, también hice [un video sobre este tema](https://www.youtube.com/watch=rceZhveizdM).
+ > Por si te lo perdiste, también hice [un video sobre este tema](https://www.youtube.com/watch=rceZhveizdM).
 
 # No desestimes escribir código limpio y estructurado desde el inicio
 
@@ -58,7 +58,7 @@ Los *data scientist* solían tener fama de escribir código que funcione sin imp
 
 También **trata de estructurar tu código en bloques lógicos**, uno en el que solo hagas lectura de datos, otro en donde hagas el *feature engineering,* otro para *feature selection*, modelado y así sucesivamente. No mezcles lectura de datos con el entrenamiento de un modelo de ML.
 
-Tengo un video sobre este [cómo te recomiendo a ti, *data scientist*, que escribas tu código](https://www.youtube.com/watch=B8Ppy4RgHBg).
+ > Tengo un video sobre [cómo te recomiendo a ti, *data scientist*, que escribas tu código](https://www.youtube.com/watch=B8Ppy4RgHBg).
 
 # No todo es Python
 
@@ -68,7 +68,7 @@ El lenguaje por excelencia para manipular este tipo de información es SQL, por 
 
 Puede que tengas la idea de que SQL es algo viejo, que solo se usa en sistemas transaccionales, pero no, SQL es más relevante puesto que para extraer información de los *data warehouses* de tu compañía tienes que usar este lenguaje (o alguno extremadamente similar).
 
-Conoce [Snowflake, y cómo es que potencia con SQL las aplicaciones actuales de datos](https://www.youtube.com/watch=TTxJ7kehgRU):
+ > Conoce [Snowflake, y cómo es que potencia con SQL las aplicaciones actuales de datos](https://www.youtube.com/watch=TTxJ7kehgRU):
 
 ## ¿Excel?
 
