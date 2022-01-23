@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}{% if articles_page %}{% if articles_page.number == 1 %}{{ SITENAME }} // {{ TAGLINE }}{% else %}{{ SITENAME }} - Page {{ articles_page.number }}{% endif %}{% else %}{{ SITENAME }} – Untitled Page{% endif %}{% endblock title %}
+{% block title %}{% if articles_page %}{% if articles_page.number == 1 %}{{ SITENAME }} // {{ TAGLINE }}{% else %}{{ SITENAME }} - Page {{ articles_page.number }}{% endif %}{% else %}{{ SITENAME }}{% endif %}{% endblock title %}
 
 
 {% block og_metadata %}
