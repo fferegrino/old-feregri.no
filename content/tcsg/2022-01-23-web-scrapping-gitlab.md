@@ -7,6 +7,7 @@ author: Antonio Feregrino
 short_summary: Vamos a usar Gitlab para hacer web scraping diario de un sitio web del gobierno mexicano, ¿te animas?
 lang: es
 tags: python, gitlab, webscraping
+sidebarimage: https://ik.imagekit.io/thatcsharpguy/posts/mananeras_74Gg9i3SC.jpg
 ---
 
 El día de hoy quiero hablarles sobre un pequeño proyecto que comencé hace ya unos cuantos meses con la idea de analizar lo que el entonces [presidente de México](https://es.wikipedia.org/wiki/Andr%C3%A9s_Manuel_L%C3%B3pez_Obrador) en sus conferencias diarias. El objetivo de este proyecto era recolectar las transcripciones disponibles en el sitio web del gobierno, en esta sesión en vivo de YouTube les muestro [cómo hice parte de este proyecto](https://www.youtube.com/watch?v=8vL3FcK2QcQ).
@@ -103,7 +104,7 @@ Ahora sí, la parte más interesante, ejecutar el *web scraping*. Lo primero es 
 - Usamos `git commit` para confirmar los cambios a los archivos que acabamos de agregar.
 - Usamos `git push` para cargar nuestros nuevos cambios al repositorio remoto de GitLab (sí, estamos haciendo un nuevo commit a Gitlab desde Gitlab)
 
-De este modo nos aseguramos que los archivos que usamos para almacenar las urls que ya visitamos estén actualizados.
+De este modo nos aseguramos que los archivos que usamos para almacenar las urls que ya visitamos estén actualizados en este repositorio.
 
 ```yaml
 crawl:
@@ -123,6 +124,6 @@ Hay algunas configuraciones que son necesarias para ejecutar el *pipeline* defin
 
 ![https://ik.imagekit.io/thatcsharpguy/posts/menu_BK2nv98LO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642929857502](https://ik.imagekit.io/thatcsharpguy/posts/menu_BK2nv98LO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642929857502)
 
-Y pues eso es todo, así es como mi dataset en Kaggle se actualiza diariamente, se que no es tan detallado (ni limpio) como podría haber sido, pero espero que te sirva para darte una idea de lo que se puede hacer con Gitlab y pon poco de imaginación.
+Y pues eso es todo, así es como [mi dataset en Kaggle se actualiza diariamente](https://www.kaggle.com/ioexception/mananeras) y un nuevo commit es creado en este repositorio, se que no es tan detallado (ni limpio) como podría haber sido, pero espero que te sirva para darte una idea de lo que se puede hacer con Gitlab y pon poco de imaginación.
 
-Encuentra el [código para este post en Gitlab](https://gitlab.com/thatcsharpguy/datasets/mananeras/-/tree/post-version-1), recuerda que me puedes encontrar en [Twitter @io_exception](https://twitter.com/io_exception) en donde estoy más que feliz de responder preguntas.
+Encuentra el [código para este post en Gitlab](https://gitlab.com/thatcsharpguy/datasets/mananeras/-/tree/post-version-1) para que tu también juegues con él, recuerda que me puedes encontrar en [Twitter @io_exception](https://twitter.com/io_exception) en donde estoy más que feliz de responder preguntas.
