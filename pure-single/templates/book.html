@@ -7,16 +7,16 @@
     <meta property="og:title" content="{{ item.title }} // {{ SITENAME }}" />
     <meta property="og:description" content="{{ item.short_summary | escape }}" />
     <meta property="og:url" content="{{ SITEURL }}/{{ item.url }}" />
-    {% if item.sidebarimage %}
-        <meta property="og:image" content="{{ item.sidebarimage }}" />
+    {% if item.social_image %}
+        <meta property="og:image" content="{{ item.social_image }}" />
     {% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@io_exception">
     <meta name="twitter:creator" content="@io_exception">
     <meta name="twitter:title" content="{{ item.title }} // {{ SITENAME }}">
     <meta name="twitter:description" content="{{ item.short_summary | escape }}">
-    {% if item.sidebarimage %}
-        <meta name="twitter:image" content="{{ item.sidebarimage }}" />
+    {% if item.social_image %}
+        <meta name="twitter:image" content="{{ item.social_image }}" />
     {% endif %}
     <!-- Item tags end -->
     <meta name="description" content="{{ item.short_summary | escape }}">

@@ -93,3 +93,6 @@ COLLECTIONS = [
 ARTICLE_EXCLUDES = ['pages'] + [
     collection["folder"]  for collection in COLLECTIONS
 ]
+
+ARTICLE_URL="{slug}"
+ARTICLE_SAVE_AS="{slug}/index.html"
