@@ -28,8 +28,8 @@ pre {
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	width: 25%;
-	margin-left: -25%;
+	width: 20%;
+	margin-left: -20%;
 }
 .avatar {
 	width: 100px;
@@ -143,7 +143,7 @@ pre {
 }
 .content {
 	padding: 2em 3em 0;
-	max-width: 1000px;
+	max-width: 1300px;
 	font-size: 110%;
 	line-height: 1.45;
 	color: #333332;
@@ -232,7 +232,7 @@ pre {
 }
 /* LAYOUT CSS */
 #layout {
-	padding-left: 25%;
+	padding-left: 20%;
 	/* "left col (nav + list)" width */
 	position: relative;
 }

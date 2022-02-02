@@ -4,7 +4,7 @@ language: es
 title: ¿Comenzando con la ciencia de datos 2022?
 date: 2021-12-28 10:00:00
 short_summary: En este post recopilo algunos de los consejos que te doy para que comiences en la ciencia de datos, inspirado por el hilo de Xavier Carrera en Twitter.
-sidebarimage: https://ik.imagekit.io/thatcsharpguy/posts/pillars-ds.jpg?updatedAt=1640723076369&tr=w-1200,h-630,fo-top
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/pillars-ds.jpg?updatedAt=1640723076369&tr=w-1200,h-630,fo-top
 tags: data-science
 ---  
 
