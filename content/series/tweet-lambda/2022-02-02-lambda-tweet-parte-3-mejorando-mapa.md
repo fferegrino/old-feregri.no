@@ -1,21 +1,24 @@
 ---
 layout: post
 language: es
-title: Mejorando el mapa con GeoPandas – Tweets desde AWS Lambda – Parte 3
+title: Mapas con GeoPandas – Bot con AWS Lambda: P3
 date: 2022-02-02 10:00:03
 short_summary: Vamos a mejorar un poco la apariencia del mapa usando algunas configuraciones específicas de GeoPandas y Seaborn
 tags: python, github, aws, geopandas, seaborn
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-part-3_Pox7NGAWx.jpg
 slug: lambda-tweet-parte-3-mapas-geopandas
 --- 
 
 Esta serie de posts consta de 6 entregas, siendo esta la tercera en donde vamos a mejorar un poco la apariencia del mapa usando algunas configuraciones específicas de GeoPandas y Seaborn. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
- - Configurando Twitter y AWS - [Esta entrega](/lambda-tweet-parte-1-github-aws-twitter)
+ - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
  - Mejorando el mapa con GeoPandas - [Parte 3](/lambda-tweet-parte-3-mapas-geopandas)
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+ 
+---
 
 Para este post vamos a estar trabajando con información relacionada con las estaciones de bicicletas, esta información fue descargada de la API de TFL (la red de transporte público de Londres), la información es la siguiente:
 
@@ -243,3 +246,5 @@ def plot_map(cycles_info: pd.DataFrame) -> str:
 Listo, ¡eso es todo!
 
 Así es como [se ve el repositorio](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-2-map-improvements) al terminar este post.
+
+Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post, el código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 

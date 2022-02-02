@@ -1,21 +1,24 @@
 ---
 layout: post
 language: es
-title: Programando la lambda con Python – Tweets desde AWS Lambda – Parte 2
+title: Programando la lambda con Python – Bot con AWS Lambda: P2
 date: 2022-02-02 10:00:02
 short_summary: Vamos realizar la implementación en Python para consutar una API, generar un mapa con GeoPandas y tuitear con Twython
 tags: python, github, aws
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-part-2_AXPvmxNGH.jpg
 slug: lambda-tweet-parte-2-python
 --- 
 
 Esta serie de posts consta de 6 entregas, siendo esta la segunda en donde vamos realizar la implementación en Python para consutar una API, generar un mapa con GeoPandas y tuitear con Twython. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
- - Configurando Twitter y AWS - [Esta entrega](/lambda-tweet-parte-1-github-aws-twitter)
+ - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
  - Mejorando el mapa con GeoPandas - [Parte 3](/lambda-tweet-parte-3-mapas-geopandas)
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+
+---
 
  > ⚠️ A mi me gusta usar Pipenv para gestionar dependencias y entornos virtuales para aplicaciones en Python – tu puedes usar cualquier otro gestor de dependencias que más te convenga.
 
@@ -207,3 +210,5 @@ def execute():
 ```
 
 Guardé este código en un archivo llamado *app.py*. Así es como [se ve el repositorio](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-1-python) al terminar este post.
+
+Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post, el código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 

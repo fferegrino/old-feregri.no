@@ -96,3 +96,5 @@ ARTICLE_EXCLUDES = ['pages'] + [
 
 ARTICLE_URL="{slug}"
 ARTICLE_SAVE_AS="{slug}/index.html"
+TAG_URL="tag/{slug}"
+TAG_SAVE_AS="tag/{slug}/index.html"

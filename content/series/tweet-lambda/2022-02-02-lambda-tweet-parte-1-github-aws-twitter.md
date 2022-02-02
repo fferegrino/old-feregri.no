@@ -1,12 +1,24 @@
 ---
 layout: post
 language: es
-title: Configurando Twitter y AWS – Tweets desde AWS Lambda – Parte 1
+title: Configurando Twitter y AWS – Bot con AWS Lambda: P1
 date: 2022-02-02 10:00:01
 short_summary: Vamos a hablar sobre algunos detalles “administrativos” de conseguir y almacenar los secretos necesarios para que esta pequeña aplicación funcione
 tags: python, github, aws
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-part-1_BOlOK42Bl.jpg
 slug: lambda-tweet-parte-1-github-aws-twitter
 --- 
+
+Esta serie de posts consta de 6 entregas, siendo esta la primera en donde vamos a hablar sobre algunos detalles “administrativos” de conseguir y almacenar los secretos necesarios para que esta pequeña aplicación funcione. Los siguientes posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
+
+ - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
+ - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
+ - Mejorando el mapa con GeoPandas - [Parte 3](/lambda-tweet-parte-3-mapas-geopandas)
+ - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
+ - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
+ - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+
+---
 
 En Londres hay un sistema de renta de bicicletas el cual suelo usar frecuentemente, hay cerca de 700 estaciones en toda la red y desde siempre me intrigó conocer cómo es que estas fluyen en la ciudad.
 
@@ -17,15 +29,6 @@ Así que con eso en mente me decidí crear un bot que consultara el estado de la
 [https://twitter.com/CyclesLondon/status/1488784529766682625](https://twitter.com/CyclesLondon/status/1488784529766682625)
 
 Sí, es un tuit, y es que lo que vamos a hacer es una aplicación que tuitee el estado de la red de bicicletas cada determinado tiempo. En esta serie te voy a hablar de: Python con pandas, geopandas, twython, AWS Lambda, Docker...
-
-Esta serie de posts consta de 6 entregas, siendo esta la primera en donde vamos a hablar sobre algunos detalles “administrativos” de conseguir y almacenar los secretos necesarios para que esta pequeña aplicación funcione. Los siguientes posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
-
- - Configurando Twitter y AWS - [Esta entrega](/lambda-tweet-parte-1-github-aws-twitter)
- - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
- - Mejorando el mapa con GeoPandas - [Parte 3](/lambda-tweet-parte-3-mapas-geopandas)
- - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
- - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
- - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
 
 # Secretos
 
@@ -173,3 +176,5 @@ Y listo, ahora si ya está casi todo lo “administrativo”.
 # Conclusión
 
 No hubo nada de código en esta entrada, más bien un montón de configuración y tareas administrativas necesarias para permitirnos ejecutar despliegue continuo y para poder tuitear desde una Lambda de AWS.
+
+Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post, el código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 

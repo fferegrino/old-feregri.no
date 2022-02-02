@@ -1,21 +1,24 @@
 ---
 layout: post
 language: es
-title: Infraestructura con Terraform – Tweets desde AWS Lambda – Parte 5
+title: Infraestructura con Terraform – Bot con AWS Lambda: P5
 date: 2022-02-02 10:00:05
 short_summary: Vamos a generar la infraestructura necesaria para la lambda, incluyendo un repositorio de ECR y Eventos de CloudWatch para llamar a la ejecución de la función
 tags: python, github, aws, terraform, ecr, lambda
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-part-5_FE8AgrAJ6.jpg
 slug: lambda-tweet-parte-5-terraform
 --- 
 
 Esta serie de posts consta de 6 entregas, siendo esta la quinta en donde vamos a generar la infraestructura necesaria para la lambda, incluyendo un repositorio de ECR y Eventos de CloudWatch para llamar a la ejecución de la función. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
- - Configurando Twitter y AWS - [Esta entrega](/lambda-tweet-parte-1-github-aws-twitter)
+ - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
  - Mejorando el mapa con GeoPandas - [Parte 3](/lambda-tweet-parte-3-mapas-geopandas)
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+
+---
 
 Como ya lo he mencionado anteriormente, estaremos trabajando con una *lambda* de AWS, lo cual significa que tenemos que crear infraestructura en AWS.
 
@@ -291,3 +294,5 @@ resource "aws_lambda_permission" "allow_cloudwatch_to_call_lambda" {
 Recuerda, todo este contenido existe en el archivo *terraform/main.tf* dentro del repositorio en el que hemos estado trabajando.
 
 Así es como [se ve el repositorio](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-4-terraform) al terminar este post.
+
+Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post, el código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 

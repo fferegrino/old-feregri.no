@@ -1,21 +1,24 @@
 ---
 layout: post
 language: es
-title: Configurando GitHub Actions – Tweets desde AWS Lambda – Parte 6
+title: Configurando GitHub Actions – Bot con AWS Lambda: P6
 date: 2022-02-02 10:00:06
 short_summary: Vamos a usar GitHub actions para automatizar el provisionamiento de recursos con Terraform y la publicación de nuevas versiones de nuestra lambda.
 tags: python, github, aws, terraform, github actions
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-part-6_DbKr-mcvk.jpg
 slug: lambda-tweet-parte-6-github-actions
 --- 
 
 Esta serie de posts consta de 6 entregas, siendo esta la sexta en donde vamos a usar GitHub actions para automatizar el provisionamiento de recursos con Terraform y la publicación de nuevas versiones de nuestra lambda. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
- - Configurando Twitter y AWS - [Esta entrega](/lambda-tweet-parte-1-github-aws-twitter)
+ - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
  - Mejorando el mapa con GeoPandas - [Parte 3](/lambda-tweet-parte-3-mapas-geopandas)
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+
+---
 
 Viene la parte de la automatización en GitHub – a través de un *pipeline* de CI/CD, lo primero que vamos a hacer es crear un archivo llamado *aws.yml* en la carpeta .*github/workflows*, como la extensión lo sugiere es un archivo que sigue el formato YAML.
 
@@ -182,3 +185,4 @@ Nuevamente configuramos *terraform*, lo inicializamos y por último aplicamos lo
 
 Así es como [se ve el repositorio](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-5-github-action) al terminar este post.
 
+Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post, el código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 

@@ -1,21 +1,24 @@
 ---
 layout: post
 language: es
-title: Creando la lambda en un contenedor – Tweets desde AWS Lambda – Parte 4
+title: Dockerizando el código – Bot con AWS Lambda: P4
 date: 2022-02-02 10:00:04
 short_summary: Vamos a empaquetar nuestro código en Python dentro de un contenedor para que AWS lo use al ejecutar la lambda.
 tags: python, github, aws
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-part-4_ck6phbCDbl.jpg
 slug: lambda-tweet-parte-4-contenedor-lambda
 --- 
 
 Esta serie de posts consta de 6 entregas, siendo esta la cuarta en donde vamos a empaquetar nuestro código en Python dentro de un contenedor para que AWS lo use al ejecutar la lambda. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
- - Configurando Twitter y AWS - [Esta entrega](/lambda-tweet-parte-1-github-aws-twitter)
+ - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
  - Mejorando el mapa con GeoPandas - [Parte 3](/lambda-tweet-parte-3-mapas-geopandas)
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+
+---
 
 La idea de las *lambdas* en AWS es que es código que no está constantemente en ejecución en un servidor (de ahí que se le conozca como *serverless* al paradigma); las *lambdas* se ejecutan bajo demanda y durante un corto tiempo.
 
@@ -125,3 +128,5 @@ curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" \
 ```
 
 Así es como [se ve el repositorio](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-3-dockerise) al terminar este post.
+
+Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post, el código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 
