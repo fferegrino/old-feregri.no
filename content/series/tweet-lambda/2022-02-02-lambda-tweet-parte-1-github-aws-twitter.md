@@ -26,7 +26,7 @@ Resulta que la autoridad a cargo del sistema tiene una API que permite ser consu
 
 Así que con eso en mente me decidí crear un bot que consultara el estado de la red, y así es como se ve el resultado final, al que llegaremos cuando esta serie de post esté terminada.
 
-[https://twitter.com/CyclesLondon/status/1488784529766682625](https://twitter.com/CyclesLondon/status/1488784529766682625)
+![https://twitter.com/CyclesLondon/status/1488784529766682625](https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/Screenshot_2022-02-02_at_22.08.13_Gyqq-QAyJ.png?tr=w-500)
 
 Sí, es un tuit, y es que lo que vamos a hacer es una aplicación que tuitee el estado de la red de bicicletas cada determinado tiempo. En esta serie te voy a hablar de: Python con pandas, geopandas, twython, AWS Lambda, Docker...
 
@@ -177,4 +177,4 @@ Y listo, ahora si ya está casi todo lo “administrativo”.
 
 No hubo nada de código en esta entrada, más bien un montón de configuración y tareas administrativas necesarias para permitirnos ejecutar despliegue continuo y para poder tuitear desde una Lambda de AWS.
 
-Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post, el código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 
+Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post – si es que algo no queda tan claro o encontraste un *typo*. El código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 
