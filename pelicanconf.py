@@ -58,7 +58,7 @@ STATIC_PATHS = [
 ]
 THEME = "pure-single"
 COVER_IMG_URL="https://ik.imagekit.io/thatcsharpguy/feregri_no/sidebar_ZtRSpq7HJM.jpg?updatedAt=1637790559197"
-PROFILE_IMG_URL="https://ik.imagekit.io/thatcsharpguy/feregri_no/pfp_EpoeHfoKQZ.jpg?updatedAt=1637790988278"
+PROFILE_IMG_URL="https://ik.imagekit.io/thatcsharpguy/feregri_no/pfp_EpoeHfoKQZ.jpg?tr=w-100&updatedAt=1637790988278"
 
 # Filters
 JINJA_FILTERS = {
