@@ -2,7 +2,7 @@
 layout: post
 lannguage: es
 title: C# con estilo (a la fuerza)
-original_url: http://thatcsharpguy.com/post/c-con-estilo-a-fuerzas
+original_url: https://thatcsharpguy.com/post/c-con-estilo-a-fuerzas
 date: 2020-06-04 12:00:00
 author: Antonio Feregrino
 short_summary: ¿A quién no le gusta el código escrito siguiendo un estandar? te muestro como puedes aplicar el tuyo en .NET

@@ -117,7 +117,7 @@ docker run \
     -e API_SECRET="ACTUAL VALUE FOR API_SECRET" \
     -e ACCESS_TOKEN="ACTUAL VALUE FOR ACCESS_TOKEN" \
     -e ACCESS_TOKEN_SECRET="ACTUAL VALUE FOR ACCESS_TOKEN_SECRET" \
-        hello-world
+        lambda-cycles
 ```
 
 Luego, desde otra terminal, puedes ejecutar la *lambda* con *curl:*

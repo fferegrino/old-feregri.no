@@ -6,3 +6,5 @@ output
 
 # Generated
 **/*.min.css
+
+.DS_Store
