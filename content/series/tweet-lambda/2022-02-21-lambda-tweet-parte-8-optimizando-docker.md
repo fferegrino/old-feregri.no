@@ -3,13 +3,13 @@ layout: post
 language: es
 title: Optimizando Docker – Bot con AWS Lambda: P7
 date: 2022-02-21 10:00:08
-short_summary: Vamos a usar GitHub actions para automatizar el provisionamiento de recursos con Terraform y la publicación de nuevas versiones de nuestra lambda.
-tags: python, github, aws, terraform, github actions
-social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-part-6_DbKr-mcvk.jpg
+short_summary: Voy a reducir el tamaño de la imagen hecha con Docker, una reducción de más de 50% para reducir costos y hacer más eficiente nuestro pipeline.
+tags: python, github, aws, docker
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/8-optimising-docker.jpg
 slug: lambda-tweet-parte-8-aligerando-docker
 --- 
 
-Esta serie de posts consta de 8 entregas, siendo esta la sexta en donde vamos a usar GitHub actions para automatizar el provisionamiento de recursos con Terraform y la publicación de nuevas versiones de nuestra lambda. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
+Esta serie de posts consta de 8 entregas, siendo esta la octaba en donde voy a reducir el tamaño de la imagen hecha con Docker, una reducción de más de 50% para reducir costos y hacer más eficiente nuestro pipeline. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
  - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
@@ -258,6 +258,6 @@ curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" \
         -d '{}'
 ```
 
-Así es como se ve el repositorio al terminar este post: [fferegrino/tweeting-cycles-lambda at part-6-add-testing](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-6-add-testing).
+Así es como se ve el repositorio al terminar este post: [fferegrino/tweeting-cycles-lambda at part-7-optimise-docker](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-7-optimise-docker).
 
 Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post – si es que algo no queda tan claro o encontraste un *typo*. El código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon).

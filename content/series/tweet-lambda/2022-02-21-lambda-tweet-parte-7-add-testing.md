@@ -3,13 +3,13 @@ layout: post
 language: es
 title: Agregando pruebas con Pytest – Bot con AWS Lambda: P7
 date: 2022-02-21 10:00:07
-short_summary: Vamos a usar GitHub actions para automatizar el provisionamiento de recursos con Terraform y la publicación de nuevas versiones de nuestra lambda.
-tags: python, github, aws, terraform, github actions
-social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-part-6_DbKr-mcvk.jpg
+short_summary: Voy a agregar pruebas para el código de la lambda usando pytest, hablando de patching, fixtures y docker.
+tags: python, github, pytest, github actions
+social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/7-testing-with-pytest.jpg
 slug: lambda-tweet-parte-7-add-testing
 --- 
 
-Esta serie de posts consta de 8 entregas, siendo esta la sexta en donde vamos a usar GitHub actions para automatizar el provisionamiento de recursos con Terraform y la publicación de nuevas versiones de nuestra lambda. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
+Esta serie de posts consta de 8 entregas, siendo esta la septima en donde voy a agregar pruebas para el código de la lambda usando pytest, hablando de patching, fixtures y docker. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
  - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
