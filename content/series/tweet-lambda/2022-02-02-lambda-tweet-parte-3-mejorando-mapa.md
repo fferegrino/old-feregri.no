@@ -9,7 +9,7 @@ social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-p
 slug: lambda-tweet-parte-3-mapas-geopandas
 --- 
 
-Esta serie de posts consta de 6 entregas, siendo esta la tercera en donde vamos a mejorar un poco la apariencia del mapa usando algunas configuraciones específicas de GeoPandas y Seaborn. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
+Esta serie de posts consta de 8 entregas, siendo esta la tercera en donde vamos a mejorar un poco la apariencia del mapa usando algunas configuraciones específicas de GeoPandas y Seaborn. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
  - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
@@ -17,6 +17,8 @@ Esta serie de posts consta de 6 entregas, siendo esta la tercera en donde vamos 
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+ - Agregando pruebas con Pytest - [Parte 7](/lambda-tweet-parte-7-add-testing)
+ - Optimizando Docker - [Parte 8](/lambda-tweet-parte-8-optimizando-docker)
  
 ---
 
@@ -38,7 +40,7 @@ Hablando un poco sobre el formato de este post, en esta ocasión iré transforma
 
 ![https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/06_-_map-with-stations-centered_VYKfJed9Igv.png](https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/06_-_map-with-stations-centered_VYKfJed9Igv.png)
 
-Si llevas mucha prisa y quieres ver el código final, puedes dar click aquí. Si quieres saber cómo llegué a ese código, sigue leyendo.
+Si llevas mucha prisa y quieres ver el código final, puedes ir directamente al final del post. Si quieres saber cómo llegué a ese código, sigue leyendo.
 
 # La API orientada a objetos
 
@@ -167,8 +169,6 @@ La línea final reemplaza nuestra etiqueta anticuada por la que acabamos de ensa
 ![https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/06_-_map-with-stations-centered_VYKfJed9Igv.png](https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/06_-_map-with-stations-centered_VYKfJed9Igv.png)
 
 # Código final
-
-A mi me gusta trabajar lo más posible con la API orientada a objetos
 
 ```python
 from typing import Tuple

@@ -9,7 +9,7 @@ social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-p
 slug: lambda-tweet-parte-5-terraform
 --- 
 
-Esta serie de posts consta de 6 entregas, siendo esta la quinta en donde vamos a generar la infraestructura necesaria para la lambda, incluyendo un repositorio de ECR y Eventos de CloudWatch para llamar a la ejecución de la función. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
+Esta serie de posts consta de 8 entregas, siendo esta la quinta en donde vamos a generar la infraestructura necesaria para la lambda, incluyendo un repositorio de ECR y Eventos de CloudWatch para llamar a la ejecución de la función. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
  - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
@@ -17,6 +17,8 @@ Esta serie de posts consta de 6 entregas, siendo esta la quinta en donde vamos a
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+ - Agregando pruebas con Pytest - [Parte 7](/lambda-tweet-parte-7-add-testing)
+ - Optimizando Docker - [Parte 8](/lambda-tweet-parte-8-optimizando-docker)
 
 ---
 
@@ -161,7 +163,7 @@ resource "null_resource" "ecr_image" {
 
 ## Información de la imagen
 
-Es necesario generar una fuente de datos (con la forma de una ``aws_ecr_image``) que especifique una dependencia a la creación y publicación de la imagen, esto lo podemos hacer gracias a `depends_on`:
+Es necesario generar una fuente de datos (con la forma de una `aws_ecr_image`) que especifique una dependencia a la creación y publicación de la imagen, esto lo podemos hacer gracias a `depends_on`:
 
 ```
 data "aws_ecr_image" "lambda_image" {
@@ -175,7 +177,7 @@ data "aws_ecr_image" "lambda_image" {
 
 ## Políticas y permisos – *Policies* and *permissions*
 
-Antes de crear la Lambda, tengo que encargarme de otras tareas administrativas, la primera es crear un rol para la que la Lambda pueda asumir determinado rol para ser ejecutada:
+Antes de crear la *lambda*, tengo que encargarme de otras tareas administrativas, la primera es crear un rol para la que la *lambda* pueda asumir y ser ejecutada:
 
 ```
 resource "aws_iam_role" "lambda" {
@@ -253,7 +255,7 @@ resource "aws_lambda_function" "lambda" {
 
 ### Ejecutando cada X minutos
 
-Hasta aquí todo bien, si ejecutas terraform hasta este punto tengo ya varias cosas creadas: un repositorio de ECR, una imagen de docker, y una lambda. Pero falta la cereza en el pastel, y es que el punto de convertir el código en una lambda es que quiero ejecutarla varias veces a lo largo del día, cada cierto tiempo. 
+Hasta aquí todo bien, si ejecutamos terraform hasta este punto, verás que ya tenemos varias cosas creadas: un repositorio de ECR, una imagen de docker, y una lambda. Pero falta la cereza en el pastel, y es que el punto de convertir el código en una lambda es que quiero ejecutarla varias veces a lo largo del día, cada cierto tiempo. 
 
 Para lograr esta tarea puedo usar un *trigger* con el servicio CloudWatch de AWS, algo que ejecute mi lambda a intervalos de tiempo definidos por mi, esto es posible con Terraform también. 
 
