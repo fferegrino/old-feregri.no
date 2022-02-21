@@ -1,7 +1,7 @@
 ---
 layout: post
 language: es
-title: Optimizando Docker – Bot con AWS Lambda: P7
+title: Optimizando Docker – Bot con AWS Lambda: P8
 date: 2022-02-21 10:00:08
 short_summary: Voy a reducir el tamaño de la imagen hecha con Docker, una reducción de más de 50% para reducir costos y hacer más eficiente nuestro pipeline.
 tags: python, github, aws, docker
