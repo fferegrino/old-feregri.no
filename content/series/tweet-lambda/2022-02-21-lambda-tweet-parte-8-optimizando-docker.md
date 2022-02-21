@@ -184,7 +184,7 @@ De nada sirve crear una imagen de prueba si no la uso, para ejecutar las pruebas
 
 ```makefile
 run-test-container:
-	docker run -it --entrypoint '' test-lambda-cycles python -m pytest tests/
+	docker run -t --entrypoint '' test-lambda-cycles python -m pytest tests/
 ```
 
 Igualmente agregué un nuevo paso al *pipeline* de CI, para ejecutar estas pruebas de forma automática, usualmente las pruebas que requieren de contenedor se deben ejecutar después de construir el contenedor pero antes de que se publique en algún repositorio, para prevenir que en el repositorio haya código que no funciona.
