@@ -82,7 +82,7 @@ Guarda el archivo con el nombre `Certificates.p12` dentro de la carpeta `secrets
 ### Exportando los perfiles de publicación  
 Lo primero es descubrir cuál es el perfil de publicación que corresponde al que acabamos de descargar, para hacerlo, lista los perfiles con el siguiente comando:
 
-```bash
+```shell
 ls -lah ~/Library/MobileDevice/Provisioning\ Profiles/
 ```
 
@@ -92,7 +92,7 @@ En este caso, el más reciente es el que corresponde al perfil de publicación d
 
 El siguiente paso es copiar el perfil a la carpeta `secrets`. 
 
-```bash
+```shell
 cp ~/Library/MobileDevice/Provisioning\ Profiles/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision secrets
 ```  
 
@@ -102,21 +102,21 @@ Toma nota de este identificador porque lo verás en muchos lados, el mío es `f3
 
 Como lo mencioné al inicio de esta sección, no podemos subir nuestros secretos (léase el certificado y el perfil de publicación) así como así a GitHub, antes hay que protegerlos mediante la encriptación. Usaremos *gpg* y la contraseña que creaste al inicio de este post.
 
-```bash
+```shell
 gpg --symmetric --cipher-algo AES256 Certificates.p12
 gpg --symmetric --cipher-algo AES256 f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision
 ```
 
 Después de esto, deberás tener un par de archivos con el mismo nombre que los anteriores, pero con `.gpg` como extensión:
 
-```bash
+```shell
 Certificates.p12.gpg
 f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision.gpg
 ```
 
 Solo para asegurarnos de que no vamos a publicar nuestros secretos al descubierto, los eliminamos:
 
-```bash
+```shell
 rm Certificates.p12
 rm f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision
 ```
@@ -126,32 +126,32 @@ Una vez que nuestros archivos están en GitHub encriptados, debemos hacer posibl
 
  - Desencriptar los secretos usando el password almacenado en "DECRYPT_KEY"
  
-```bash
+```shell
 gpg --quiet --batch --yes --decrypt --passphrase="$DECRYPT_KEY" --output ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision.gpg
 gpg --quiet --batch --yes --decrypt --passphrase="$DECRYPT_KEY" --output ./secrets/Certificates.p12 ./secrets/Certificates.p12.gpg
 ```
  - Crea la carpeta "Provisioning Profiles" en la computadora que está ejecutando las acciones de GitHub
 
-```bash
+```shell
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 ```
 
  - Copia el perfil de publicación a la carpeta recién creada
 
-```bash
+```shell
 cp ./secrets/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/f3b9e904-6d99-409a-91f4-440c5b79565d.mobileprovision
 ```
 
  - Crea un Keychain e importa el archivo Certificates.p12
 
-```bash
+```shell
 security create-keychain -p "" build.keychain
 security import ./secrets/Certificates.p12 -t agg -k ~/Library/Keychains/build.keychain -P "" -A
 ```
 
  - Establece el Keychain recien creado como default
 
-```bash
+```shell
 security list-keychains -s ~/Library/Keychains/build.keychain
 security default-keychain -s ~/Library/Keychains/build.keychain
 security unlock-keychain -p "" ~/Library/Keychains/build.keychain
@@ -167,7 +167,7 @@ chmod +x secrets/decrypt_secrets.sh
 ## Compilando la app  
 El siguiente paso en el flujo de trabajo es compilar la aplicación de tal modo que nos genere un archivo `.ipa` que podemos cargar directamente en la App Store, para esta tarea usaremos `msbuild`:  
 
-```bash
+```shell
 nuget restore
 msbuild \
   /p:Configuration=Release \
@@ -181,7 +181,7 @@ Primero estamos restaurando todos los paquetes de NuGet, luego le indicamos que 
 ## Publicando en iTunes Connect  
 El siguiente paso es publicar nuestro archivo `.ipa` en la App Store, para ello vamos a usar una herramienta que nos ofrece Xcode:  
 
-```bash
+```shell
 xcrun altool --upload-app -t ios \
   -f PinCountdown.iOS/bin/iPhone/Release/PinCountdown.iOS.ipa \
   -u "${{ secrets.APPLEID_USERNAME }}" -p "${{ secrets.APPLEID_PASSWORD }}"
@@ -238,20 +238,20 @@ Al igual que como hicimos con nuestros certificados de iOS, es necesario que car
 
 ¿Recuerdas la dirección de la *keystore* que obtuvimos en el paso anterior? es hora de usarla para copiar la *keystore* en nuestra carpeta `secrets`:
 
-```bash
+```shell
 cp /Users/antonioferegrino/Library/Developer/Xamarin/Keystore/PinCountdown/PinCountdown.keystore ./secrets/PinCountdown.keystore
 ```
 
 Encriptamos, usando nuevamente nuestra contraseña `DECRYPT_KEY` que generamos al incio:
 
-```bash
+```shell
 cd secrets
 gpg --symmetric --cipher-algo AES256 PinCountdown.keystore
 ```
 
 Por último borramos el archivo `PinCountdown.keystore`, dejando solamente `PinCountdown.keystore.gpg` (además de los otros `.gpg` correspondientes a iOS):
 
-```bash
+```shell
 rm PinCountdown.keystore
 ```
 
@@ -261,13 +261,13 @@ No te olvides de colocar tus cambios en GitHub, para que ahora tu *keystore* est
 
 Coloca las siguientes líneas dentro del archivo `secrets/decrypt_secrets.sh` :
 
-```bash
+```shell
 gpg --quiet --batch --yes --decrypt --passphrase="$DECRYPT_KEY" --output ./secrets/PinCountdown.keystore ./secrets/PinCountdown.keystore.gpg
 ```
 
 ## Compilando la app  
 
-```bash
+```shell
 nuget restore
 msbuild \
   /p:Configuration=Release \

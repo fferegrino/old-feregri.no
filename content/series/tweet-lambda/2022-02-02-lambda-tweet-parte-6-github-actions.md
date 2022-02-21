@@ -9,7 +9,7 @@ social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-p
 slug: lambda-tweet-parte-6-github-actions
 --- 
 
-Esta serie de posts consta de 6 entregas, siendo esta la sexta en donde vamos a usar GitHub actions para automatizar el provisionamiento de recursos con Terraform y la publicación de nuevas versiones de nuestra lambda. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
+Esta serie de posts consta de 8 entregas, siendo esta la sexta en donde vamos a usar GitHub actions para automatizar el provisionamiento de recursos con Terraform y la publicación de nuevas versiones de nuestra lambda. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
  - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
@@ -17,6 +17,8 @@ Esta serie de posts consta de 6 entregas, siendo esta la sexta en donde vamos a 
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+ - Agregando pruebas con Pytest - [Parte 7](/lambda-tweet-parte-7-add-testing)
+ - Optimizando Docker - [Parte 8](/lambda-tweet-parte-8-optimizando-docker)
 
 ---
 

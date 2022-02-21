@@ -9,7 +9,7 @@ social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-p
 slug: lambda-tweet-parte-2-python
 --- 
 
-Esta serie de posts consta de 6 entregas, siendo esta la segunda en donde vamos realizar la implementación en Python para consutar una API, generar un mapa con GeoPandas y tuitear con Twython. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
+Esta serie de posts consta de 8 entregas, siendo esta la segunda en donde vamos realizar la implementación en Python para consutar una API, generar un mapa con GeoPandas y tuitear con Twython. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
  - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
@@ -46,7 +46,7 @@ print(f"{place.commonName} (LAT: {place.lat}, LON: {place.lon})")
 # out: Vicarage Gate, Kensington (LAT: 51.504723, LON: -0.192538)
 ```
 
-Adicionalmente, cada uno de esos elementos como place contienen un conjunto de propiedades adicionales, o `AdditionalProperties` de las cuales podemos extraer información tal como la cantidad de *docks* disponibles, cuántos de estos *docks* están en uso y cuántas bicicletas tiene disponible. Para extraer esta información adicional cree esta función auxiliar:
+Adicionalmente, cada uno de esos elementos como place contienen un conjunto de propiedades adicionales, o `AdditionalProperties` de las cuales podemos extraer información tal como la cantidad de *docks* disponibles, cuántos de estos *docks* están en uso y cuántas bicicletas tiene disponible. Para extraer esta información adicional, yo cree esta función auxiliar:
 
 ```python
 def get_number(additional_properties: List[AdditionalProperties], key: str) -> int:
@@ -104,7 +104,7 @@ bike_info_data_frame.head()
 | BikePoints_108 | Abbey Orchard Street, W   | 51.4981 | -0.132102 |      21 |             8 |      29 | 2022-01-28 16:18:00 |    0.724138  |
 ```
 
-Yo he puesto estas dos funciones en un archivo llamado *[download.py](http://download.py)* en la raíz de mi repositorio; más adelante lo usaré.
+Yo he puesto estas dos funciones en un archivo llamado *download.py* en la raíz de mi repositorio; más adelante lo usaré.
 
 # Graficando la información
 
@@ -168,7 +168,7 @@ Guardé esta función en un archivo separado llamado *plot.py*.
 
 # Tuiteando la información
 
-Ya tenemos la imagen, es hora de tuitearlo usando *Twython*, vamos a necesitar unos cuantos secretos que obtendremos de Twitter en el post siguiente, por el momento, vamos a pretender que ya los tenemos. Vamos a usar esos secretos para crear un cliente de `Twython`:
+Ya tenemos la imagen, es hora de tuitearlo usando *Twython*, vamos a necesitar unos cuantos secretos que obtuvimos de Twitter en el post anterior. Vamos a usar esos secretos para crear un cliente de `Twython`:
 
 ```python
 app_key = os.environ["API_KEY"]

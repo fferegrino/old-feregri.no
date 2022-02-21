@@ -9,7 +9,7 @@ social_image: https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/cycles-p
 slug: lambda-tweet-parte-4-contenedor-lambda
 --- 
 
-Esta serie de posts consta de 6 entregas, siendo esta la cuarta en donde vamos a empaquetar nuestro código en Python dentro de un contenedor para que AWS lo use al ejecutar la lambda. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
+Esta serie de posts consta de 8 entregas, siendo esta la cuarta en donde vamos a empaquetar nuestro código en Python dentro de un contenedor para que AWS lo use al ejecutar la lambda. Los otros posts en la serie abordan a su vez un aspecto muy específico del problema, puedes encontrarlos aquí:
 
  - Configurando Twitter y AWS - [Parte 1](/lambda-tweet-parte-1-github-aws-twitter)
  - Programando la lambda con Python - [Parte 2](/lambda-tweet-parte-2-python)
@@ -17,6 +17,8 @@ Esta serie de posts consta de 6 entregas, siendo esta la cuarta en donde vamos a
  - Creando la lambda en un contenedor - [Parte 4](/lambda-tweet-parte-4-contenedor-lambda)
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
+ - Agregando pruebas con Pytest - [Parte 7](/lambda-tweet-parte-7-add-testing)
+ - Optimizando Docker - [Parte 8](/lambda-tweet-parte-8-optimizando-docker)
 
 ---
 
@@ -93,7 +95,7 @@ Vamos paso por paso:
 
 Para construir la imagen basta ejecutar un comando como el siguiente:
 
-```bash
+```shell
 docker build -t lambda-cycles .
 ```
 
@@ -110,7 +112,7 @@ La gran ventaja de usar contenedores es que podemos ejecutar la lambda localment
 
 Es importante que utilices las banderas `-p` y `-e`, la primera para especificar un *mappeo* de puertos entre el *8080* del contenedor y el *9000* del host. La segunda es para especificar variables de entorno para el contenedor, estos deben ser los secretos de Twitter que habíamos obtenido previamente.
 
-```bash
+```shell
 docker run \
     -p 9000:8080 
     -e API_KEY="ACTUAL VALUE FOR API_KEY" \
@@ -122,7 +124,7 @@ docker run \
 
 Luego, desde otra terminal, puedes ejecutar la *lambda* con *curl:*
 
-```bash
+```shell
 curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" \
 		-d '{}'
 ```
