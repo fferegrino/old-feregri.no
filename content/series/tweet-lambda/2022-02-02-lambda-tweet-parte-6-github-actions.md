@@ -45,7 +45,7 @@ Lo siguiente es definir los *jobs* que forman parte del flujo de trabajo – en 
 
 # Preparar la imagen – *build*
 
-Para definir un trabajo debemos especificar los pasos (*steps*) que lo forman, individualmente puedes especificar el tipo de un nombre más amigable y el tipo de *runner* en el que se ejecuta. Nosotros no usaremos nada complicado, así que `ubuntu-latest` nos funciona bien.
+Para definir un trabajo debemos especificar los pasos (*steps*) que lo forman, individualmente puedes especificar un nombre más amigable y el tipo de *runner* en el que se ejecuta. Nosotros no usaremos nada complicado, así que `ubuntu-latest` nos funciona bien.
 
 ```yaml
   build:

@@ -40,7 +40,7 @@ Hablando un poco sobre el formato de este post, en esta ocasión iré transforma
 
 ![https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/06_-_map-with-stations-centered_VYKfJed9Igv.png](https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/06_-_map-with-stations-centered_VYKfJed9Igv.png)
 
-Si llevas mucha prisa y quieres ver el código final, puedes dar click aquí. Si quieres saber cómo llegué a ese código, sigue leyendo.
+Si llevas mucha prisa y quieres ver el código final, puedes ir directamente al final del post. Si quieres saber cómo llegué a ese código, sigue leyendo.
 
 # La API orientada a objetos
 
@@ -169,8 +169,6 @@ La línea final reemplaza nuestra etiqueta anticuada por la que acabamos de ensa
 ![https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/06_-_map-with-stations-centered_VYKfJed9Igv.png](https://ik.imagekit.io/thatcsharpguy/posts/python-lambdas/06_-_map-with-stations-centered_VYKfJed9Igv.png)
 
 # Código final
-
-A mi me gusta trabajar lo más posible con la API orientada a objetos
 
 ```python
 from typing import Tuple
