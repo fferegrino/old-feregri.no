@@ -18,7 +18,7 @@ Esta serie de posts consta de 8 entregas, siendo esta la cuarta en donde vamos a
  - Infraestructura con Terraform - [Parte 5](/lambda-tweet-parte-5-terraform)
  - Automatización con GitHub Actions - [Parte 6](/lambda-tweet-parte-6-github-actions)
  - Agregando pruebas con Pytest - [Parte 7](/lambda-tweet-parte-7-add-testing)
- - Optimizando Docker - [Parte 8](/lambda-tweet-parte-8-optimizando-docker)
+ - Optimizando Docker - [Parte 8](/lambda-tweet-parte-8-aligerando-docker)
 
 ---
 
