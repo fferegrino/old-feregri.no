@@ -5,7 +5,7 @@ title: Animando gráficas con matplotlib
 date: 2020-04-05 10:00:00
 short_summary: En este post te mostraré cómo es que puedes animar tus gráficas hechas con matplotlib en Python.
 tags: matplotlib, python, seaborn
-original_url: https://tacosdedatos.com/animaciones-matplotlib
+original_url: https://old.tacosdedatos.com/animaciones-matplotlib
 ---  
 
 ## Creando animaciones  

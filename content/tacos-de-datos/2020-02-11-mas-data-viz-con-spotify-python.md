@@ -1,7 +1,7 @@
 ---
 layout: post
 language: es
-original_url: https://tacosdedatos.com/mas-data-viz-con-spotify-python
+original_url: https://old.tacosdedatos.com/mas-data-viz-con-spotify-python
 title: Más visualización con tus datos de Spotify con Python
 date: 2020-02-11 10:00:00
 tags: seaborn, matplotlib, python

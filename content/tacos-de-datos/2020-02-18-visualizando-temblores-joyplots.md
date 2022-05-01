@@ -1,7 +1,7 @@
 ---
 layout: post
 lannguage: es
-original_url: https://tacosdedatos.com/visualizando-temblores-joyplots
+original_url: https://old.tacosdedatos.com/visualizando-temblores-joyplots
 title: Visualizando temblores con ridgeline plots
 date: 2020-02-18 10:00:00
 tags: sismos, ridgeline plots, matplotlib, python

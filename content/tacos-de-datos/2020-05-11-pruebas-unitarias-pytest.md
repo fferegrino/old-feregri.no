@@ -5,11 +5,11 @@ title: Pruebas unitarias con pytest
 date: 2020-05-11 10:00:00
 short_summary: Otra entrega de "detrás de los datos", en esta ocasión hablaré sobre cómo podemos asegurarnos de que nuestro código funciona como esperamos usando pytest.
 tags: pytest, python, testing
-original_url: https://tacosdedatos.com/animaciones-matplotlib
+original_url: https://old.tacosdedatos.com/pruebas-unitarias-pytest
 ---  
 
 #### Aviso  
-A lo largo de este post estaré probando las funciones del código que escribí para el post sobre la [generación automática de datasets](https://tacosdedatos.com/generacion-automatica-datasets); sin embargo no es necesario que leas ese post primero, pero seguramente te ayudará a ponerle más contexto al código que aquí se presenta.
+A lo largo de este post estaré probando las funciones del código que escribí para el post sobre la [generación automática de datasets](https://old.tacosdedatos.com/generacion-automatica-datasets); sin embargo no es necesario que leas ese post primero, pero seguramente te ayudará a ponerle más contexto al código que aquí se presenta.
 
 ## ¿Qué es *pytest*?  
 
