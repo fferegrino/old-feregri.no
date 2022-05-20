@@ -3,7 +3,8 @@ layout: post
 language: es
 title: Descarga de datos de Reddit
 date: 2022-05-20 10:00:00
-short_summary: Vamos a descargar una cantidad enorme de datos de Reddit para investigar el interés de los usuarios sobre un tema
+short_summary: Vamos a descargar una cantidad enorme de datos de Reddit para investigar el interés de los usuarios sobre un tema  
+tags: python, reddit, github 
 original_url: https://www.tacosdedatos.com/ioexception/descargando-datos-de-reddit-d6d
 ---  
 
