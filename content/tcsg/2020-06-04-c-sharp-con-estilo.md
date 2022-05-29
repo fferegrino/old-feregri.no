@@ -149,4 +149,4 @@ El mismo editor nos dice cuál es el error y nos da sugerencias para corregirlo 
 
 ¿Lo recomiendo? **Por supuesto que sí**, lo recomiendo y lo uso en todos los proyectos que puedo.
 
-Espero que este post the haya sido de utilidad, y si tienes dudas o comentarios, me puedes preguntar en [Twitter](https://twitter.com/io_exception). 
+Espero que este post the haya sido de utilidad, y si tienes dudas o comentarios, me puedes preguntar en [Twitter](https://twitter.com/feregri_no). 

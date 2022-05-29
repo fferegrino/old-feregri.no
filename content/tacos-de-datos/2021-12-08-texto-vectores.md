@@ -155,4 +155,4 @@ Si bien estas representaciones son buenas u útiles, hay casos en los que necesi
 ### Guarda tus vectorizadores  
 Sin importar qué método de transformación usaste, siempre debes usar el mismo para transformaciones subsecuentes. Por ejemplo, si usaste `fit` con un transformador para los datos de entrenamiento de un algoritmo de clasificación, debes usar el mismo transformador (ya entrenado) para obtener los vectores al momento de realizar predicciones en nuevos datos.
 
-Mientras tanto, te invito a que me en Twitter en [@io_exception](https://twitter.com/io_exception), por allá podemos conversar sobre el tema.
+Mientras tanto, te invito a que me en Twitter en [@feregri_no](https://twitter.com/feregri_no), por allá podemos conversar sobre el tema.

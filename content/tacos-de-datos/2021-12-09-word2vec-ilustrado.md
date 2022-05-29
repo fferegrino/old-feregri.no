@@ -428,4 +428,4 @@ Espero que ahora ya comprendas qué son los *embeddings* y el algoritmo detrás 
 
 <hr />
 
-Sin más les recuerdo que como siempre, quedo atento a sus dudas y comentarios en mi cuenta de Twitter [@io_exception](https://twitter.com/io_exception), en donde me pueden con contactar para hablar sobre ciencia de datos, ingeniería de software y muchas cosas más.  
+Sin más les recuerdo que como siempre, quedo atento a sus dudas y comentarios en mi cuenta de Twitter [@feregri_no](https://twitter.com/feregri_no), en donde me pueden con contactar para hablar sobre ciencia de datos, ingeniería de software y muchas cosas más.  

@@ -198,6 +198,6 @@ As with any piece of software that is to be released and meant to run unattended
 
 ### Any question or comments?  
 
-Feel free to leave a comment below, or tweet at me at [@io_exception](https://twitter.com/io_exception), I am more than happy to help you if things are not clear and need further explanation about some piece of code. Remember that the whole app is [available on GitHub](https://github.com/fferegrino/medium-collector/tree/v0.0.0) for you to tinker around with it.
+Feel free to leave a comment below, or tweet at me at [@feregri_no](https://twitter.com/feregri_no), I am more than happy to help you if things are not clear and need further explanation about some piece of code. Remember that the whole app is [available on GitHub](https://github.com/fferegrino/medium-collector/tree/v0.0.0) for you to tinker around with it.
 
 

@@ -156,4 +156,4 @@ Igualmente, hay que agregar un *step* que ejecute `make test` para correr las pr
 
 Así es como se ve el repositorio al terminar este post: [fferegrino/tweeting-cycles-lambda at part-6-add-testing](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-6-add-testing).
 
-Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post – si es que algo no queda tan claro o encontraste un *typo*. El código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon).
+Recuerda que me puedes encontrar en Twitter [en @feregri_no](https://twitter.com/feregri_no) para preguntarme sobre este post – si es que algo no queda tan claro o encontraste un *typo*. El código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon).

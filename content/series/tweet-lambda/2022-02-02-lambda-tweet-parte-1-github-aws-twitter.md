@@ -179,4 +179,4 @@ Y listo, ahora si ya está casi todo lo “administrativo”.
 
 No hubo nada de código en esta entrada, más bien un montón de configuración y tareas administrativas necesarias para permitirnos ejecutar despliegue continuo y para poder tuitear desde una Lambda de AWS.
 
-Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post – si es que algo no queda tan claro o encontraste un *typo*. El código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 
+Recuerda que me puedes encontrar en Twitter [en @feregri_no](https://twitter.com/feregri_no) para preguntarme sobre este post – si es que algo no queda tan claro o encontraste un *typo*. El código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 

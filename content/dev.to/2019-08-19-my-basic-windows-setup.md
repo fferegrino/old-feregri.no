@@ -85,4 +85,4 @@ There are other tools that I recommend installing, but these may be less importa
  - [Fiddler](https://www.telerik.com/fiddler)
  - [7-zip](https://www.7-zip.org/download.html)
 
-I hope this post has been helpful, if you have questions or doubts, ask me on [Twitter](https://twitter.com/io_exception).  
+I hope this post has been helpful, if you have questions or doubts, ask me on [Twitter](https://twitter.com/feregri_no).  

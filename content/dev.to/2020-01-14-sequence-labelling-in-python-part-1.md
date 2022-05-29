@@ -44,4 +44,4 @@ This tutorial will be divided into other 4 parts:
  - [Conditional Random Fields with python-crfsuite](https://dev.to/fferegrino/conditional-random-fields-in-python-sequence-labelling-part-4-5ei2)
  - [Putting everything together](https://dev.to/fferegrino/putting-everything-together-sequence-labelling-in-python-part-5-19ng)
 
-Hopefully, you will follow along and will ask some questions if you have by leaving a comment here or contacting me on twitter via [@io_exception](https://twitter.com/io_exception).
+Hopefully, you will follow along and will ask some questions if you have by leaving a comment here or contacting me on twitter via [@feregri_no](https://twitter.com/feregri_no).

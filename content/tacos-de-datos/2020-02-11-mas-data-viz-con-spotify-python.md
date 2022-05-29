@@ -253,7 +253,7 @@ x_labels.extend([
 y_labels = ["Mon", "", "Wed", "", "Fri", "", "Sun"]
 ```
 
-Definitivamente las etiquetas del eje de las X son mucho más complicado que las de Y, ya que no son continuas ni fijas, deben ser calculadas de acuerdo a los datos (si quieres un poco más de explicación sobre el código, dime en los comentarios o en [@io_exception](https://twitter.com/io_exception)).
+Definitivamente las etiquetas del eje de las X son mucho más complicado que las de Y, ya que no son continuas ni fijas, deben ser calculadas de acuerdo a los datos (si quieres un poco más de explicación sobre el código, dime en los comentarios o en [@feregri_no](https://twitter.com/feregri_no)).
 
 Después vamos a hacer un poco de *grafimagia* con el tamaño de la gráfica, colores y los ejes:
 
@@ -298,4 +298,4 @@ Y *voilà*, nuestra gráfica está lista:
 ![Histograma bonito](https://dev-to-uploads.s3.amazonaws.com/i/jdxkpdasrfc5arj3rnlw.png)
 
 
-Ya quedará en ti modificar algunos aspectos de la gráfica, tal vez ponerle información acerca de la cantidad de canciones, habilitar la barra de color... otra gran idea sería hacer lo mismo pero en un *framework* como D3.js, pero eso ya queda para otro post. Por lo mientras, te invito a jugar con los datos en [este Google Colab Notebook](https://colab.research.google.com/drive/1dnjCKGllq5v1iEUuoQxbROMG0IXfgoiG) y a que me contactes [vía twitter en @io_exception](https://twitter.com/io_exception).
+Ya quedará en ti modificar algunos aspectos de la gráfica, tal vez ponerle información acerca de la cantidad de canciones, habilitar la barra de color... otra gran idea sería hacer lo mismo pero en un *framework* como D3.js, pero eso ya queda para otro post. Por lo mientras, te invito a jugar con los datos en [este Google Colab Notebook](https://colab.research.google.com/drive/1dnjCKGllq5v1iEUuoQxbROMG0IXfgoiG) y a que me contactes [vía twitter en @feregri_no](https://twitter.com/feregri_no).

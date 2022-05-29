@@ -108,4 +108,4 @@ As an example output:
 
 Finally, we need to apply the function to all the offers in our dataset, and save these to a file, to keep them handy for the next task, you can read more about it here: [Training a CRF in Python](https://dev.to/fferegrino/conditional-random-fields-in-python-sequence-labelling-part-4-5ei2).
 
-As always, feel free to ask some questions if you have them by leaving a comment here or contacting me on twitter via [@io_exception](https://twitter.com/io_exception).
+As always, feel free to ask some questions if you have them by leaving a comment here or contacting me on twitter via [@feregri_no](https://twitter.com/feregri_no).

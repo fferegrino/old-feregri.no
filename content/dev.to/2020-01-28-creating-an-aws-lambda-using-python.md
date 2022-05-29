@@ -129,4 +129,4 @@ After this step, you can save and then click test again, this time our lambda sh
 
 ![The tweet we just tweeted from our lambda](https://thepracticaldev.s3.amazonaws.com/i/3okqr3xxu062y9khz9oj.png)
 
-And that is it, now you have a functioning lambda that is built in the same environment it will be run on. I hope you were able to follow this tutorial if you have any comments or questions, do not forget to leave them down below or to contact me on [@io_exception on twitter](https://twitter.com/io_exception/).
+And that is it, now you have a functioning lambda that is built in the same environment it will be run on. I hope you were able to follow this tutorial if you have any comments or questions, do not forget to leave them down below or to contact me on [@feregri_no on twitter](https://twitter.com/feregri_no/).

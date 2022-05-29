@@ -109,4 +109,4 @@ De las entrevistas les prometo que les haré un video separado, y seguramente av
 
 # Conclusión
 
-Evidentemente los consejos de los que te hablé aquí son muy generales y los tendrás que adaptar a tu situación y aspiraciones profesionales, pero aún así espero que te sirvan. Cualquier duda o comentario, contáctame por Twitter en <a href="https://twitter.com/io_exception" target="_blank">@io_exception</a>.
+Evidentemente los consejos de los que te hablé aquí son muy generales y los tendrás que adaptar a tu situación y aspiraciones profesionales, pero aún así espero que te sirvan. Cualquier duda o comentario, contáctame por Twitter en <a href="https://twitter.com/feregri_no" target="_blank">@feregri_no</a>.

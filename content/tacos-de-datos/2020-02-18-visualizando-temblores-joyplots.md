@@ -190,11 +190,11 @@ Y con eso bastaría para poder ver resultados de nuestra gráfica, sin embargo, 
 ```python
 plt.title("Earthquakes in Mexico (2017/01/01 - 2018/01/01)", size=30)
 
-text = AnchoredText("@io_exception - Data: SSN México", loc=3,
+text = AnchoredText("@feregri_no - Data: SSN México", loc=3,
                     prop={'size': 10}, frameon=True)
 ax.add_artist(text)
 ```
 
 ![visualizando xavg](https://i.imgur.com/MHLosn4.png)
 
-Ya quedará en ti modificar algunos aspectos de la gráfica, tal vez ponerle un poco más de color, mejorar la escala de los datos, incluyendo más factores, o hacer una gráfica similar pero con otros datos. Por lo mientras, te invito a jugar con los datos en [este Google Colab Notebook](https://colab.research.google.com/drive/1fwVd2QMEMXgrJD-XNDv5EGayjZYAX7IB) y a que me contactes [vía twitter en @io_exception](https://twitter.com/io_exception).
+Ya quedará en ti modificar algunos aspectos de la gráfica, tal vez ponerle un poco más de color, mejorar la escala de los datos, incluyendo más factores, o hacer una gráfica similar pero con otros datos. Por lo mientras, te invito a jugar con los datos en [este Google Colab Notebook](https://colab.research.google.com/drive/1fwVd2QMEMXgrJD-XNDv5EGayjZYAX7IB) y a que me contactes [vía twitter en @feregri_no](https://twitter.com/feregri_no).

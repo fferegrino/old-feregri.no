@@ -107,4 +107,4 @@ It's Time to Leave San Francisco (https://medium.com/@subes01/its-time-to-leave-
 
 And that is pretty much it, there is still much to do on my way to create a medium dataset, but I just wanted to publish this as I spent some time figuring things out and I thought I could share some of what I learned. I have uploaded the code I used for this post to both [GitHub](https://github.com/python-stuff/medium-email) and a [Binder Notebook](https://mybinder.org/v2/gh/python-stuff/medium-email/master), ready for you to explore.
 
-If you have any questions do not hesitate to contact me on [Twitter @io_exception](https://twitter.com/io_exception) or to leave a comment below :)
+If you have any questions do not hesitate to contact me on [Twitter @feregri_no](https://twitter.com/feregri_no) or to leave a comment below :)

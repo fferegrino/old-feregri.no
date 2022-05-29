@@ -126,4 +126,4 @@ Hay algunas configuraciones que son necesarias para ejecutar el *pipeline* defin
 
 Y pues eso es todo, así es como [mi dataset en Kaggle se actualiza diariamente](https://www.kaggle.com/ioexception/mananeras) y un nuevo commit es creado en este repositorio, se que no es tan detallado (ni limpio) como podría haber sido, pero espero que te sirva para darte una idea de lo que se puede hacer con Gitlab y pon poco de imaginación.
 
-Encuentra el [código para este post en Gitlab](https://gitlab.com/thatcsharpguy/datasets/mananeras/-/tree/post-version-1) para que tu también juegues con él, recuerda que me puedes encontrar en [Twitter @io_exception](https://twitter.com/io_exception) en donde estoy más que feliz de responder preguntas.
+Encuentra el [código para este post en Gitlab](https://gitlab.com/thatcsharpguy/datasets/mananeras/-/tree/post-version-1) para que tu también juegues con él, recuerda que me puedes encontrar en [Twitter @feregri_no](https://twitter.com/feregri_no) en donde estoy más que feliz de responder preguntas.

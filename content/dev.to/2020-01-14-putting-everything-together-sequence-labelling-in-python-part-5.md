@@ -100,7 +100,7 @@ n - !
 
 By visual inspection we can confirm that the tags are correct: "Todo México" is the origin (o), "El Cairo, Egipto" is the destination and "13,677" is the price (p).
 
-And that is it. This is the end of this series of posts on how to do sequence labelling with Python. I hope you were able to follow, and if not, I hope you have some questions for me. Remember, post them here or ask me via twitter [@io_exception](https://twitter.com/io_exception).
+And that is it. This is the end of this series of posts on how to do sequence labelling with Python. I hope you were able to follow, and if not, I hope you have some questions for me. Remember, post them here or ask me via twitter [@feregri_no](https://twitter.com/feregri_no).
 
 ### What else is there to do?  
 

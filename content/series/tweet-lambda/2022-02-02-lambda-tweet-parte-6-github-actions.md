@@ -187,4 +187,4 @@ Nuevamente configuramos *terraform*, lo inicializamos y por último aplicamos lo
 
 Así es como [se ve el repositorio](https://github.com/fferegrino/tweeting-cycles-lambda/tree/part-5-github-action) al terminar este post.
 
-Recuerda que me puedes encontrar en Twitter [en @io_exception](https://twitter.com/io_exception) para preguntarme sobre este post – si es que algo no queda tan claro o encontraste un *typo*. El código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 
+Recuerda que me puedes encontrar en Twitter [en @feregri_no](https://twitter.com/feregri_no) para preguntarme sobre este post – si es que algo no queda tan claro o encontraste un *typo*. El código final de esta serie [está en GitHub](https://github.com/fferegrino/tweeting-cycles-lambda) y la cuenta que tuitea el estado de la red de bicicletas es [@CyclesLondon](https://twitter.com/CyclesLondon) 

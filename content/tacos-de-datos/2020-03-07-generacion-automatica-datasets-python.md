@@ -206,4 +206,4 @@ Al igual que con cualquier pieza de software que se pondrá en producción y que
 
 ### ¿Preguntas? ¿comentarios?
 
-No olvides que me puedes dejar un comentario aquí o enviarme un tuit en [@io_exception](https://twitter.com/io_exception), con gusto te ayudo si las cosas no están claras o necesitas más explicación sobre el código. Recuerda que la aplicación completa está [disponible en GitHub](https://github.com/fferegrino/medium-collector/tree/v0.0.0) para que puedas jugar con el código.
+No olvides que me puedes dejar un comentario aquí o enviarme un tuit en [@feregri_no](https://twitter.com/feregri_no), con gusto te ayudo si las cosas no están claras o necesitas más explicación sobre el código. Recuerda que la aplicación completa está [disponible en GitHub](https://github.com/fferegrino/medium-collector/tree/v0.0.0) para que puedas jugar con el código.

@@ -91,6 +91,6 @@ using MathNet.Numerics;
 using KernelDensity = MathNet.Numerics.Statistics.KernelDensity;
 ``` 
 
-Eso es todo por el momento, en el siguiente post les hablaré de algunos paquetes para hacer análisis de datos y graficar con C#, todo dentro de un C# Notebook! por el momento, si tienen alguna duda, me pueden contactar vía Twitter en [@io_exception](https://twitter.com/io_exception).
+Eso es todo por el momento, en el siguiente post les hablaré de algunos paquetes para hacer análisis de datos y graficar con C#, todo dentro de un C# Notebook! por el momento, si tienen alguna duda, me pueden contactar vía Twitter en [@feregri_no](https://twitter.com/feregri_no).
 
 Por cierto: Esta publicación es parte del Segundo Calendario de Adviento de C# en Español, una iniciativa liderada por [Benjamín Camacho](https://twitter.com/jbenjamincc). Revisa [este enlace](https://aspnetcoremaster.com/calendario-adviento-csharp-2019.html) para conocer más artículos interesantes sobre C# publicados por varios miembros de la comunidad. 

@@ -364,7 +364,7 @@ Puedes ver todos los cambios que hice en [esta Pull Request](https://github.com/
 
 ## Errores comunes y consejos  
 
-He de aceptarlo, poner todas las piezas juntas me costó un poco de trabajo, además de [consumir todos mis minutos disponibles en Actions](https://twitter.com/io_exception/status/1282370753279725570) porque estaba probando en un repositorio privado. Así que con el objetivo de hacer el proceso más sencillo para ti te dejo estos consejos:  
+He de aceptarlo, poner todas las piezas juntas me costó un poco de trabajo, además de [consumir todos mis minutos disponibles en Actions](https://twitter.com/feregri_no/status/1282370753279725570) porque estaba probando en un repositorio privado. Así que con el objetivo de hacer el proceso más sencillo para ti te dejo estos consejos:  
 
  - **Cada que vas a publicar en las tiendas, debes cambiar el número de versión de tu app**: Las tiendas de aplicaciones son muy estrictas en cuanto a las versiones que publicas de tu app, en el sentido de que no puedes publicar la misma versión dos veces. Te invito a que veas mi post sobre [cómo versionar cualquier app con Python](http://feregrino.dev/versioning-any-app-with-python.html) para que veas una manera de hacerlo automáticamente.
 
@@ -380,4 +380,4 @@ on:
   - **Guarda todas las contraseñas que uses**: no podrás recuperar ninguna contraseña de las que guardes como secretos de GitHub, es importante que las mantengas a salvo en otro lado en donde si las puedas recuperar.
 
 ## ¿Dudas?  
-Encuéntrame en [https://twitter.com/io_exception](https://twitter.com/io_exception), en donde con todo gusto responderé cualquier duda que tengas.
+Encuéntrame en [https://twitter.com/feregri_no](https://twitter.com/feregri_no), en donde con todo gusto responderé cualquier duda que tengas.

@@ -123,7 +123,7 @@ Con un poco de trabajo extra se pueden hacer cosas un tanto más complejas, como
 
 ![Una distribución de probabilidad](https://i.imgur.com/8ON2Bq0.gif)
 
-No me voy a detener a hablar tanto del código, pero lo dejo ahí para que juegues con él. Me puedes contactar en los comentarios, o en [@io_exception en Twitter](https://twitter.com/io_exception) si tienes dudas sobre él.
+No me voy a detener a hablar tanto del código, pero lo dejo ahí para que juegues con él. Me puedes contactar en los comentarios, o en [@feregri_no en Twitter](https://twitter.com/feregri_no) si tienes dudas sobre él.
 
 Nuevamente, el principio imás importante es pensar en la forma final de nuestra animación, solo que en este caso tenemos cuatro posibles finales, que a su vez son 4 posibles principios...
 
@@ -202,4 +202,4 @@ anim.to_jshtml()
 <iframe style="border:none;" src="https://mystifying-meitner-c75bce.netlify.com/multiplots.html" width="100%" height="450"></iframe>
 <small>Sí, puedes interactuar con la gráfica de arriba.</small>
 
-Y, ¡ya está! ahora espero que puedas tu también hacer animaciones para que tus datos te ayuden a contar historias más interesantes y atractivas. Te recuerdo que me puedes contactar en [@io_exception en Twitter](https://twitter.com/io_exception) si tienes dudas sobre lo que aquí te conté o te interesa saber más sobre Python o *matplotlib*.
+Y, ¡ya está! ahora espero que puedas tu también hacer animaciones para que tus datos te ayuden a contar historias más interesantes y atractivas. Te recuerdo que me puedes contactar en [@feregri_no en Twitter](https://twitter.com/feregri_no) si tienes dudas sobre lo que aquí te conté o te interesa saber más sobre Python o *matplotlib*.

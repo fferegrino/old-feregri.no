@@ -28,7 +28,7 @@ AUTHOR_FEED_RSS = None
 # Social widget
 SOCIAL = (
     ('github', 'https://github.com/fferegrino/'),
-    ('twitter-square', 'https://twitter.com/io_exception'),
+    ('twitter-square', 'https://twitter.com/feregri_no'),
     ('youtube', 'https://www.youtube.com/thatcsharpguy'),
     ('linkedin', 'https://www.linkedin.com/in/antonioferegrino/'),
 )

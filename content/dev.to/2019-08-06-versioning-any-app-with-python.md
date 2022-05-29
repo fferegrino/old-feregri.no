@@ -55,7 +55,7 @@ Now, the first step is opening a terminal (I prefer PowerShell) and install the 
 pip install advbumpversion
 ```
 
-Of course, it is better if you do this using a virtual environment, [ask me how on twitter](https://twitter.com/io_exception).
+Of course, it is better if you do this using a virtual environment, [ask me how on twitter](https://twitter.com/feregri_no).
 
 ### Configuring the versions  
 Now, there is a configuration file that we must add to our project, this file holds the metadata for our versioning, as well as how the tool we just installed should behave. This file is named `.bumpversion.cfg` and should be located in the root of your project. Let's dive into its contents:

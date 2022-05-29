@@ -201,4 +201,4 @@ The file that needs to be labelled is located at `data/to_label.csv`.
 
 **Can we make this easy?** I have gone through the *"pains"* of labelling some data myself; the labels are stored in the file `data/to_label-done.csv`.
 
-Visit the next post in the series: [Other feature extraction](https://dev.to/fferegrino/extracting-more-features-sequence-labelling-in-python-part-3-3389). In the meantime, I hope this post has shed some light on how to use the `StanfordPOSTagger`; feel free to ask some questions if you have them by leaving a comment here or contacting me on twitter via [@io_exception](https://twitter.com/io_exception).
+Visit the next post in the series: [Other feature extraction](https://dev.to/fferegrino/extracting-more-features-sequence-labelling-in-python-part-3-3389). In the meantime, I hope this post has shed some light on how to use the `StanfordPOSTagger`; feel free to ask some questions if you have them by leaving a comment here or contacting me on twitter via [@feregri_no](https://twitter.com/feregri_no).

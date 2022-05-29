@@ -193,7 +193,7 @@ El eliminar las *stopwords* nos ayuda a elminiar palabras comunes que tienen poc
 
 Esta misma idea se puede aplicar para tokens muy raros dentro de nuestro texto... podríamos eliminar tokens que no aparezcan más de $X$ cantidad de veces, bajo la sospecha de que tal vez fueron errores ortográficos o palabras sin importancia.
 
-Si tienes más dudas o comentarios, no olvides hacérmelas llegar a través de los comentarios en esta página, o, para mayor seguridad, a mi cuenta de Twitter [@io_exception](https://twitter.com/io_exception)
+Si tienes más dudas o comentarios, no olvides hacérmelas llegar a través de los comentarios en esta página, o, para mayor seguridad, a mi cuenta de Twitter [@feregri_no](https://twitter.com/feregri_no)
 
 ### ¿Y las visualizaciones?  
 Para no fallarle al público de Tacos de Datos, vamos a hacer una sencillísima visualización con las palabras que más frecuente usa el presidente mexicano en sus conferencias (ojo, acá no vamos a hablar de política). Y de paso aprovecho para presentarles un dataset que estoy manteniendo en Kaggle, en el cual coloco más o menos semanalmente todas las versiones estenográficas de las conferencias que publica la presidencia de México. Puedes acceder al dataset aquí [Conferencias Mañaneras](https://www.kaggle.com/ioexception/mananeras): 
@@ -247,4 +247,4 @@ plt.show()
 
 Algunas cosas esperadas y otras no tanto: habrá que ver por qué se la pasa diciendo "mil" y "casar"... habrá que ver también si estas palabras no son sino las formas base de otras que tal vez hagan más sentido (puede que al lematizar nuestros tokens estemos perdiendo esta información). Como dije, esto es solo el comienzo del análisis de texto, ¡aún falta mucho por aprender!
 
-Si tienes alguna duda con lo presentado en este post, repito: pregúntame por Twitter en [@io_exception](https://twitter.com/io_exception).
+Si tienes alguna duda con lo presentado en este post, repito: pregúntame por Twitter en [@feregri_no](https://twitter.com/feregri_no).

@@ -132,4 +132,4 @@ Después de que lo llenes, puedes guardar y presionar *Test* de nuevo, esta vez 
 
 ![The tweet we just tweeted from our lambda](https://thepracticaldev.s3.amazonaws.com/i/3okqr3xxu062y9khz9oj.png)
 
-Y eso es todo, ahora ya tienes una lambda que es empacada en el mismo entorno que se va a ejecutar. El código de la lambda se [encuentra en GitHub](https://github.com/messier16/faas)! Espero me hayas podido seguir en este post, y si tienes algún comentario o pregunta, no dudes en hacérmelo llegar ya sea en los comentarios o a mi [cuenta de twitter @io_exception](https://twitter.com/io_exception/).
+Y eso es todo, ahora ya tienes una lambda que es empacada en el mismo entorno que se va a ejecutar. El código de la lambda se [encuentra en GitHub](https://github.com/messier16/faas)! Espero me hayas podido seguir en este post, y si tienes algún comentario o pregunta, no dudes en hacérmelo llegar ya sea en los comentarios o a mi [cuenta de twitter @feregri_no](https://twitter.com/feregri_no/).

@@ -255,7 +255,7 @@ x_labels.extend([
 y_labels = ["Mon", "", "Wed", "", "Fri", "", "Sun"]
 ```
 
-The X axis labels are far more complicated than the Y ones; this is because unlike Y, the X axis is not fixed nor continuous, as such, they need to calculated based on the data. If you want a more detailed explanation, tell me in the comments or [at me on twitter at @io_exception](https://twitter.com/io_exception)).
+The X axis labels are far more complicated than the Y ones; this is because unlike Y, the X axis is not fixed nor continuous, as such, they need to calculated based on the data. If you want a more detailed explanation, tell me in the comments or [at me on twitter at @feregri_no](https://twitter.com/feregri_no)).
 
 After doing this we'll perform some modifications with colours and the axis:  
 
@@ -300,4 +300,4 @@ And *voilà*, our plot is ready:
 
 ![Histograma bonito](https://dev-to-uploads.s3.amazonaws.com/i/jdxkpdasrfc5arj3rnlw.png)
 
-It is up to you to modify the plot, may be by adding information about the number of songs, or show the colorbar... a great idea would be to recreate this plot in a framework such as D3.js, but that may well belong to another post. Again, feel free to head over to [this Colab](https://colab.research.google.com/drive/1dnjCKGllq5v1iEUuoQxbROMG0IXfgoiG) and contact me [via twitter @io_exception](https://twitter.com/io_exception).
+It is up to you to modify the plot, may be by adding information about the number of songs, or show the colorbar... a great idea would be to recreate this plot in a framework such as D3.js, but that may well belong to another post. Again, feel free to head over to [this Colab](https://colab.research.google.com/drive/1dnjCKGllq5v1iEUuoQxbROMG0IXfgoiG) and contact me [via twitter @feregri_no](https://twitter.com/feregri_no).

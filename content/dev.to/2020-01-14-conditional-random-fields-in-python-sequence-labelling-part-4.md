@@ -254,4 +254,4 @@ Our algorithm performs very, very well.
 
 It may seem like we are done here, but we still need to put everything together, in an attempt to make it easier for us to tag new offers outside of our training and testing sets, we'll do that in my next post [putting everything together](https://dev.to/fferegrino/putting-everything-together-sequence-labelling-in-python-part-5-19ng).
 
-As always, feel free to ask some questions if you have them by leaving a comment here or contacting me on twitter via [@io_exception](https://twitter.com/io_exception).
+As always, feel free to ask some questions if you have them by leaving a comment here or contacting me on twitter via [@feregri_no](https://twitter.com/feregri_no).
