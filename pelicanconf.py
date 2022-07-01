@@ -65,8 +65,12 @@ JINJA_FILTERS = {
     'hostname': hostname
 }
 
-
 DEV = 1
+
+PAGINATION_PATTERNS = (
+    (1, 'blog/{base_name}/', 'blog/{base_name}/index.html'),
+    (2, 'blog/{base_name}/{number}/','blog/{base_name}/{number}/index.html'),
+)
 
 PLUGINS = [algolia_search, collections_page_generator, toptal_minifier]
 
