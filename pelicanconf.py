@@ -1,3 +1,4 @@
+from re import TEMPLATE
 import sys
 import os
 from decouple import config
@@ -33,6 +34,16 @@ SOCIAL = (
     ('linkedin', 'https://www.linkedin.com/in/antonioferegrino/'),
 )
 
+LINK_IN_BIO_SOCIAL = (
+    ('youtube', 'https://www.youtube.com/thatcsharpguy', 'YouTube', '/thatcsharpguy'),
+    ('twitch', 'https://twitch.tv/feregri_no', 'Twitch', '/feregri_no'),
+    ('twitter', 'https://twitter.com/feregri_no', 'Twitter', '@feregri_no'),
+    ('github', 'https://github.com/fferegrino/', 'GitHub', '/fferegrino'),
+    ('internet-explorer', 'https://feregri.no/blog/', 'Blog', 'feregri.no/blog'),
+    ('linkedin', 'https://www.linkedin.com/in/antonioferegrino/', 'LinkedIn', '/in/antonioferegrino'),
+)
+
+
 OTHER_BLOGS = (
     ("That C# Guy", "https://thatcsharpguy.com"),
     ("Personal blog", "https://fferegrino.org"),
@@ -65,8 +76,16 @@ JINJA_FILTERS = {
     'hostname': hostname
 }
 
-
 DEV = 1
+
+PAGINATION_PATTERNS = (
+    (1, 'blog/{base_name}/', 'blog/{base_name}/index.html'),
+    (2, 'blog/{base_name}/{number}/','blog/{base_name}/{number}/index.html'),
+)
+
+TEMPLATE_PAGES = {
+    'one.html': 'index.html'
+}
 
 PLUGINS = [algolia_search, collections_page_generator, toptal_minifier]
 
